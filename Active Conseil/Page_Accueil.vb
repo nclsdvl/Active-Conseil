@@ -39,8 +39,8 @@ Public Class Page_Accueil
             Else
                 Choix.profil = valeurAjouter3.Value
                 Choix.maVariable = TB_MDP.Text
-                Me.Hide()
                 Choix.Show()
+                Me.Hide()
 
 
             End If

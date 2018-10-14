@@ -52,6 +52,7 @@ Partial Class Collaborateur
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.COLLABORATEURBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ActiveFinalCommunDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Active_Final_CommunDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -202,7 +203,7 @@ Partial Class Collaborateur
         '
         Me.LB_Adresse.AutoSize = True
         Me.LB_Adresse.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LB_Adresse.Location = New System.Drawing.Point(418, 152)
+        Me.LB_Adresse.Location = New System.Drawing.Point(409, 151)
         Me.LB_Adresse.Name = "LB_Adresse"
         Me.LB_Adresse.Size = New System.Drawing.Size(83, 18)
         Me.LB_Adresse.TabIndex = 14
@@ -276,12 +277,23 @@ Partial Class Collaborateur
         Me.Label6.TabIndex = 21
         Me.Label6.Text = "Veuillez choisir un collaborateur :"
         '
+        'Button1
+        '
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.Location = New System.Drawing.Point(811, 11)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(43, 47)
+        Me.Button1.TabIndex = 22
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Collaborateur
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(866, 536)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label2)
@@ -299,7 +311,9 @@ Partial Class Collaborateur
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "Collaborateur"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Collaborateur"
         CType(Me.COLLABORATEURBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ActiveFinalCommunDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -340,4 +354,5 @@ Partial Class Collaborateur
     Friend WithEvents Label2 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents Button1 As Button
 End Class

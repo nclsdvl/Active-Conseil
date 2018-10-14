@@ -118,6 +118,145 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BTN_Admin.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Georgia, 14.25pt</value>
+  </data>
+  <data name="BTN_Admin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 169</value>
+  </data>
+  <data name="BTN_Admin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 59</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BTN_Admin.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="BTN_Admin.Text" xml:space="preserve">
+    <value>Administration</value>
+  </data>
+  <data name="&gt;&gt;BTN_Admin.Name" xml:space="preserve">
+    <value>BTN_Admin</value>
+  </data>
+  <data name="&gt;&gt;BTN_Admin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BTN_Admin.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BTN_Admin.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="BTN_Client.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Georgia, 14.25pt</value>
+  </data>
+  <data name="BTN_Client.Location" type="System.Drawing.Point, System.Drawing">
+    <value>178, 256</value>
+  </data>
+  <data name="BTN_Client.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 60</value>
+  </data>
+  <data name="BTN_Client.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="BTN_Client.Text" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="&gt;&gt;BTN_Client.Name" xml:space="preserve">
+    <value>BTN_Client</value>
+  </data>
+  <data name="&gt;&gt;BTN_Client.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BTN_Client.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BTN_Client.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="BTN_Collabo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Georgia, 14.25pt</value>
+  </data>
+  <data name="BTN_Collabo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 256</value>
+  </data>
+  <data name="BTN_Collabo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 60</value>
+  </data>
+  <data name="BTN_Collabo.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="BTN_Collabo.Text" xml:space="preserve">
+    <value>Collaborateur</value>
+  </data>
+  <data name="&gt;&gt;BTN_Collabo.Name" xml:space="preserve">
+    <value>BTN_Collabo</value>
+  </data>
+  <data name="&gt;&gt;BTN_Collabo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BTN_Collabo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BTN_Collabo.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="BTN_Projet.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Georgia, 14.25pt</value>
+  </data>
+  <data name="BTN_Projet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>533, 256</value>
+  </data>
+  <data name="BTN_Projet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 60</value>
+  </data>
+  <data name="BTN_Projet.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="BTN_Projet.Text" xml:space="preserve">
+    <value>Projet</value>
+  </data>
+  <data name="&gt;&gt;BTN_Projet.Name" xml:space="preserve">
+    <value>BTN_Projet</value>
+  </data>
+  <data name="&gt;&gt;BTN_Projet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BTN_Projet.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BTN_Projet.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="LB_Bonjour.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Georgia, 24pt</value>
+  </data>
+  <data name="LB_Bonjour.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-11, 39</value>
+  </data>
+  <data name="LB_Bonjour.Size" type="System.Drawing.Size, System.Drawing">
+    <value>881, 38</value>
+  </data>
+  <data name="LB_Bonjour.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="LB_Bonjour.Text" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="LB_Bonjour.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;LB_Bonjour.Name" xml:space="preserve">
+    <value>LB_Bonjour</value>
+  </data>
+  <data name="&gt;&gt;LB_Bonjour.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LB_Bonjour.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LB_Bonjour.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="Quitter.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABGdBTUEAALGPC/xhBQAADitJREFUaEPN
@@ -183,5 +322,114 @@
         j/nxztDV4LEqT4euBo9VeRxTWFeAxzzRGboaPFbl6dDV4LEqz4oQ1hXgsTXREboaPFbl6dDV4LEqT4UQ
         flTFCF0NHqvydOhq8FiVp+Ym/gfMiTKiFXM0UwAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="Quitter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>810, 483</value>
+  </data>
+  <data name="Quitter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 43</value>
+  </data>
+  <data name="Quitter.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;Quitter.Name" xml:space="preserve">
+    <value>Quitter</value>
+  </data>
+  <data name="&gt;&gt;Quitter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Quitter.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Quitter.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Button1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        JPJ/sl+ECNF/362dYxmG3o0AAAAASUVORK5CYII=
+</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Button1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>810, 12</value>
+  </data>
+  <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 43</value>
+  </data>
+  <data name="Button1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
+    <value>Button1</value>
+  </data>
+  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>865, 538</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Choix</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Choix</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

@@ -47,6 +47,7 @@ Partial Class Page_Accueil
         Me.TB_MDP.Font = New System.Drawing.Font("Georgia", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TB_MDP.Location = New System.Drawing.Point(490, 204)
         Me.TB_MDP.Name = "TB_MDP"
+        Me.TB_MDP.PasswordChar = Global.Microsoft.VisualBasic.ChrW(88)
         Me.TB_MDP.Size = New System.Drawing.Size(263, 31)
         Me.TB_MDP.TabIndex = 1
         '
@@ -115,7 +116,9 @@ Partial Class Page_Accueil
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TB_MDP)
         Me.Controls.Add(Me.TB_Login)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "Page_Accueil"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Accueil"
         Me.ResumeLayout(False)
         Me.PerformLayout()

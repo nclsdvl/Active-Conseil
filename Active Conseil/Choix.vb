@@ -22,5 +22,11 @@
 
     Private Sub BTN_Collabo_Click(sender As Object, e As EventArgs) Handles BTN_Collabo.Click
         Collaborateur.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Page_Accueil.Show()
+        Me.Hide()
     End Sub
 End Class
