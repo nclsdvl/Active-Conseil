@@ -20,7 +20,7 @@
         Me.Close()
     End Sub
 
-    Private Sub BTN_Client_Click(sender As Object, e As EventArgs) Handles BTN_Collabo.Click
-        Client.Show()
+    Private Sub BTN_Collabo_Click(sender As Object, e As EventArgs) Handles BTN_Collabo.Click
+        Collaborateur.Show()
     End Sub
 End Class

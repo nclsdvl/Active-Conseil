@@ -80,7 +80,7 @@ Partial Class Choix
         'LB_Bonjour
         '
         Me.LB_Bonjour.Font = New System.Drawing.Font("Georgia", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LB_Bonjour.ForeColor = System.Drawing.Color.DarkBlue
+        Me.LB_Bonjour.ForeColor = System.Drawing.Color.Black
         Me.LB_Bonjour.Location = New System.Drawing.Point(-11, 39)
         Me.LB_Bonjour.Name = "LB_Bonjour"
         Me.LB_Bonjour.Size = New System.Drawing.Size(881, 38)

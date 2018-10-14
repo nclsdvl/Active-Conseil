@@ -84,10 +84,10 @@
     <Compile Include="Choix.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Client.Designer.vb">
-      <DependentUpon>Client.vb</DependentUpon>
+    <Compile Include="Collaborateur.Designer.vb">
+      <DependentUpon>Collaborateur.vb</DependentUpon>
     </Compile>
-    <Compile Include="Client.vb">
+    <Compile Include="Collaborateur.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Page_Accueil.vb">
@@ -117,8 +117,8 @@
     <EmbeddedResource Include="Choix.resx">
       <DependentUpon>Choix.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Client.resx">
-      <DependentUpon>Client.vb</DependentUpon>
+    <EmbeddedResource Include="Collaborateur.resx">
+      <DependentUpon>Collaborateur.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Page_Accueil.resx">
       <DependentUpon>Page_Accueil.vb</DependentUpon>
