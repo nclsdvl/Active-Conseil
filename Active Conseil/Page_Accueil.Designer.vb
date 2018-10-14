@@ -45,7 +45,7 @@ Partial Class Page_Accueil
         '
         Me.TB_MDP.BackColor = System.Drawing.SystemColors.ControlLight
         Me.TB_MDP.Font = New System.Drawing.Font("Georgia", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TB_MDP.Location = New System.Drawing.Point(490, 204)
+        Me.TB_MDP.Location = New System.Drawing.Point(495, 204)
         Me.TB_MDP.Name = "TB_MDP"
         Me.TB_MDP.PasswordChar = Global.Microsoft.VisualBasic.ChrW(88)
         Me.TB_MDP.Size = New System.Drawing.Size(263, 31)
