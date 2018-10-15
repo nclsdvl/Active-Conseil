@@ -29,7 +29,7 @@ Partial Class Choix
         Me.BTN_Projet = New System.Windows.Forms.Button()
         Me.LB_Bonjour = New System.Windows.Forms.Label()
         Me.Quitter = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BTN_Back = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'BTN_Admin
@@ -75,18 +75,18 @@ Partial Class Choix
         Me.Quitter.Name = "Quitter"
         Me.Quitter.UseVisualStyleBackColor = False
         '
-        'Button1
+        'BTN_Back
         '
-        resources.ApplyResources(Me.Button1, "Button1")
-        Me.Button1.Name = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        resources.ApplyResources(Me.BTN_Back, "BTN_Back")
+        Me.BTN_Back.Name = "BTN_Back"
+        Me.BTN_Back.UseVisualStyleBackColor = True
         '
         'Choix
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BTN_Back)
         Me.Controls.Add(Me.Quitter)
         Me.Controls.Add(Me.LB_Bonjour)
         Me.Controls.Add(Me.BTN_Projet)
@@ -105,5 +105,5 @@ Partial Class Choix
     Friend WithEvents BTN_Projet As Button
     Friend WithEvents LB_Bonjour As Label
     Friend WithEvents Quitter As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BTN_Back As Button
 End Class

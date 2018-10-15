@@ -1,38 +1,13 @@
-﻿Imports System.Data.SqlClient
-Imports System.Text.RegularExpressions
-
+﻿Option Explicit On
+Imports System.Data.SqlClient
 
 Public Class Collaborateur
-
-    Private Function SplitWords(ByVal s As String) As String()
-        ' Call Regex.Split function from the imported namespace.
-        ' ... Return the result array.
-        Return Regex.Split(s, "\W+")
-    End Function
 
 
 
     Private Sub Client_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Dim maConnexion As New SqlConnection("Data Source=DESKTOP-KDV6P4O\SQLEXPRESS;Initial Catalog=Active_Final_Commun;Integrated Security=True")
-        Dim maConnexion As New SqlConnection(str_Chaine_de_Connexion)
-        '--------------------------------------------------------------------REMPLISSAGE CBBOX-------------------------------------------
-        Try
-            Dim Mycommand As SqlCommand = maConnexion.CreateCommand()
-            Mycommand.CommandText = "select NOM_COLLABORATEUR, PRENOM_COLLABORATEUR, ID_COLLABORATEUR from COLLABORATEUR order by NOM_COLLABORATEUR"
-            maConnexion.Open()
-            Dim myReader As SqlDataReader = Mycommand.ExecuteReader()
-            CB_Collabo.Items.Clear()
-            Do While myReader.Read()
-                Dim tmp_chaine As String
-                tmp_chaine = myReader.GetValue(2).ToString() + " " + myReader.GetString(1) + " " + myReader.GetString(0)
-                CB_Collabo.Items.Add(tmp_chaine)
-            Loop
-            myReader.Close()
-            maConnexion.Close()
 
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+        Remplissage_CB_Collabo()
 
 
         '----------------------------------------------------------------------------------------------------------------------------------------
@@ -42,7 +17,7 @@ Public Class Collaborateur
     Private Sub CB_Collabo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CB_Collabo.SelectedIndexChanged
 
         'Dim maConnexion As New SqlConnection("Data Source=DESKTOP-KDV6P4O\SQLEXPRESS;Initial Catalog=Active_Final_Commun;Integrated Security=True")
-        Dim maConnexion As New SqlConnection(str_Chaine_de_Connexion)
+        Dim maConnexion As New SqlConnection(str_chaine_de_connexion)
         '--------------------------------------------------------recup nom et prenom collabo-------------------------------------
         Dim monCollabo As String = CB_Collabo.SelectedItem
 
@@ -52,7 +27,7 @@ Public Class Collaborateur
         '----------------------------------------------recuperation tel collabo-------------------------------------------
         Dim Mycommand As SqlCommand = maConnexion.CreateCommand()
         Mycommand.CommandText = "select TELEPHONE_COLLABORATEUR as phone from COLLABORATEUR
-                                    where NOM_COLLABORATEUR = '" & monNom(2) & "' 
+                                    where NOM_COLLABORATEUR = '" & monNom(0) & "' 
                                     and PRENOM_COLLABORATEUR = '" & monNom(1) & "'"
 
         '-------------------------------------------Connexion-----------------------------------------------------
@@ -65,7 +40,7 @@ Public Class Collaborateur
         '----------------------------------------------recuperation date embauche collabo-------------------------------------------
         Dim Mycommand2 As SqlCommand = maConnexion.CreateCommand()
         Mycommand2.CommandText = "select DATE_PREMIERE_EMBAUCHE as date from COLLABORATEUR
-                                    where NOM_COLLABORATEUR = '" & monNom(2) & "' 
+                                    where NOM_COLLABORATEUR = '" & monNom(0) & "' 
                                     and PRENOM_COLLABORATEUR = '" & monNom(1) & "'"
 
         Dim Requete2 As String
@@ -99,7 +74,7 @@ Public Class Collaborateur
         Mycommand4.CommandText = "Select RUE_ADRESSE1 from ADRESSE, COLLABORATEUR
                                   where
                                   Collaborateur.ID_ADRESSE = ADRESSE.ID_ADRESSE And
-                                  NOM_COLLABORATEUR = '" & monNom(2) & "'and PRENOM_COLLABORATEUR = '" & monNom(1) & "'"
+                                  NOM_COLLABORATEUR = '" & monNom(0) & "'and PRENOM_COLLABORATEUR = '" & monNom(1) & "'"
 
         Dim Requete4 As String = Mycommand4.ExecuteScalar
         Dim rue As String = Requete4.ToString
@@ -110,7 +85,7 @@ Public Class Collaborateur
         Mycommand5.CommandText = "Select CP_ADRESSE from ADRESSE, COLLABORATEUR
                                   where
                                   Collaborateur.ID_ADRESSE = ADRESSE.ID_ADRESSE And
-                                  NOM_COLLABORATEUR = '" & monNom(2) & "'and PRENOM_COLLABORATEUR = '" & monNom(1) & "'"
+                                  NOM_COLLABORATEUR = '" & monNom(0) & "'and PRENOM_COLLABORATEUR = '" & monNom(1) & "'"
 
         Dim Requete5 As String = Mycommand5.ExecuteScalar
         Dim CP As String = Requete5.ToString
@@ -120,7 +95,7 @@ Public Class Collaborateur
         Mycommand6.CommandText = "Select VILLE_ADRESSE from ADRESSE, COLLABORATEUR
                                   where
                                   Collaborateur.ID_ADRESSE = ADRESSE.ID_ADRESSE And
-                                  NOM_COLLABORATEUR = '" & monNom(2) & "'and PRENOM_COLLABORATEUR = '" & monNom(1) & "'"
+                                  NOM_COLLABORATEUR = '" & monNom(0) & "'and PRENOM_COLLABORATEUR = '" & monNom(1) & "'"
 
         Dim Requete6 As String = Mycommand6.ExecuteScalar
         Dim ville As String = Requete6.ToString
@@ -132,7 +107,7 @@ Public Class Collaborateur
         Mycommand7.CommandText = "Select COMPLEMENT_ADRESSE2 from ADRESSE, COLLABORATEUR
                                   where
                                   Collaborateur.ID_ADRESSE = ADRESSE.ID_ADRESSE And
-                                  NOM_COLLABORATEUR = '" & monNom(2) & "'and PRENOM_COLLABORATEUR = '" & monNom(1) & "'"
+                                  NOM_COLLABORATEUR = '" & monNom(0) & "'and PRENOM_COLLABORATEUR = '" & monNom(1) & "'"
 
         Dim Requete7 As String
 
@@ -152,7 +127,7 @@ Public Class Collaborateur
         Mycommand8.CommandText = "PS_Projet_Par_Collabo"
 
         Dim valeurAjouter3 As SqlParameter = Mycommand8.Parameters.Add("@NomCollaborateur", SqlDbType.VarChar)
-        valeurAjouter3.Value = monNom(2)
+        valeurAjouter3.Value = monNom(0)
 
         Dim valeurAjouter4 As SqlParameter = Mycommand8.Parameters.Add("@PreNomCollaborateur", SqlDbType.VarChar)
         valeurAjouter4.Value = monNom(1)
@@ -169,7 +144,7 @@ Public Class Collaborateur
         Dim Mycommand9 As SqlCommand = maConnexion.CreateCommand()
         Mycommand9.CommandText = "Select LIBELLE_LONG from PROJET, COLLABORATEUR
                                   where
-                                  NOM_COLLABORATEUR = '" & monNom(2) & "'and PRENOM_COLLABORATEUR = '" & monNom(1) & "' and
+                                  NOM_COLLABORATEUR = '" & monNom(0) & "'and PRENOM_COLLABORATEUR = '" & monNom(1) & "' and
                                   Collaborateur.ID_COLLABORATEUR = PROJET.ID_COLLABORATEUR"
 
         Dim myReader3 As SqlDataReader = Mycommand9.ExecuteReader()

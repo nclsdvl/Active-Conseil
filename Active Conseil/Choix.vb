@@ -25,8 +25,13 @@
         Me.Hide()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub BTN_Back_Click(sender As Object, e As EventArgs) Handles BTN_Back.Click
         Page_Accueil.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub BTN_Admin_Click(sender As Object, e As EventArgs) Handles BTN_Admin.Click
+        Admin.Show()
         Me.Hide()
     End Sub
 End Class

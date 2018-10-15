@@ -90,6 +90,13 @@
     <Compile Include="Collaborateur.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Admin.Designer.vb">
+      <DependentUpon>Admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fonction.vb" />
     <Compile Include="Page_Accueil.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Collaborateur.resx">
       <DependentUpon>Collaborateur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Page_Accueil.resx">
       <DependentUpon>Page_Accueil.vb</DependentUpon>
