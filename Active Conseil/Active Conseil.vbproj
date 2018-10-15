@@ -112,6 +112,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="variables.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Choix.resx">

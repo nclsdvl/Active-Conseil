@@ -27,7 +27,7 @@ Partial Class Page_Accueil
         Me.TB_MDP = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.LBL_Societe = New System.Windows.Forms.Label()
         Me.BTN_Valider = New System.Windows.Forms.Button()
         Me.Quitter = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -40,6 +40,7 @@ Partial Class Page_Accueil
         Me.TB_Login.Name = "TB_Login"
         Me.TB_Login.Size = New System.Drawing.Size(263, 31)
         Me.TB_Login.TabIndex = 0
+        Me.TB_Login.Text = "Mohamed.CAMARA"
         '
         'TB_MDP
         '
@@ -50,6 +51,7 @@ Partial Class Page_Accueil
         Me.TB_MDP.PasswordChar = Global.Microsoft.VisualBasic.ChrW(88)
         Me.TB_MDP.Size = New System.Drawing.Size(263, 31)
         Me.TB_MDP.TabIndex = 1
+        Me.TB_MDP.Text = "Mohamed.CAMARA"
         '
         'Label1
         '
@@ -71,16 +73,16 @@ Partial Class Page_Accueil
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Mot De Passe :"
         '
-        'Label3
+        'LBL_Societe
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Monotype Corsiva", 36.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.Label3.Location = New System.Drawing.Point(167, 34)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(591, 57)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "SOCIETE ACTIVE CONSEIL"
+        Me.LBL_Societe.AutoSize = True
+        Me.LBL_Societe.Font = New System.Drawing.Font("Monotype Corsiva", 36.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBL_Societe.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.LBL_Societe.Location = New System.Drawing.Point(167, 34)
+        Me.LBL_Societe.Name = "LBL_Societe"
+        Me.LBL_Societe.Size = New System.Drawing.Size(591, 57)
+        Me.LBL_Societe.TabIndex = 4
+        Me.LBL_Societe.Text = "SOCIETE ACTIVE CONSEIL"
         '
         'BTN_Valider
         '
@@ -111,7 +113,7 @@ Partial Class Page_Accueil
         Me.ClientSize = New System.Drawing.Size(887, 535)
         Me.Controls.Add(Me.Quitter)
         Me.Controls.Add(Me.BTN_Valider)
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.LBL_Societe)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TB_MDP)
@@ -129,7 +131,7 @@ Partial Class Page_Accueil
     Friend WithEvents TB_MDP As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents LBL_Societe As Label
     Friend WithEvents BTN_Valider As Button
     Friend WithEvents Quitter As Button
 End Class

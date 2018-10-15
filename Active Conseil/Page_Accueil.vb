@@ -5,8 +5,19 @@ Imports System.Text
 Public Class Page_Accueil
 
     Private Sub BTN_Valider_Click(sender As Object, e As EventArgs) Handles BTN_Valider.Click
-        Dim maConnexion As New SqlConnection("Data Source=DESKTOP-KDV6P4O\SQLEXPRESS;Initial Catalog=Active_Final_Commun;Integrated Security=True")
-        'Dim maConnexion As New SqlConnection("Data Source=DESKTOP-TA82I0L;Initial Catalog=Active_Final_Commun;Integrated Security=True")
+
+        Dim i_choix As Integer
+        i_choix = InputBox("1 pour AFPA, 2 pour home : ", "quelle connexion?")
+
+        If i_choix = 1 Then
+            str_chaine_de_connexion = str_Chaine_de_Connexion_AFPA
+        Else
+            str_chaine_de_connexion = str_Chaine_de_Connexion_HOME
+        End If
+
+        Dim maConnexion As New SqlConnection(str_chaine_de_connexion)
+
+
 
 
 
