@@ -14,7 +14,7 @@ Public Class Collaborateur
 
     Private Sub Client_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim maConnexion As New SqlConnection("Data Source=DESKTOP-KDV6P4O\SQLEXPRESS;Initial Catalog=Active_Final_Commun;Integrated Security=True")
-
+        'Dim maConnexion As New SqlConnection("Data Source=DESKTOP-TA82I0L;Initial Catalog=Active_Final_Commun;Integrated Security=True")
         '--------------------------------------------------------------------REMPLISSAGE CBBOX-------------------------------------------
         Try
             Dim Mycommand As SqlCommand = maConnexion.CreateCommand()
@@ -40,7 +40,7 @@ Public Class Collaborateur
     Private Sub CB_Collabo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CB_Collabo.SelectedIndexChanged
 
         Dim maConnexion As New SqlConnection("Data Source=DESKTOP-KDV6P4O\SQLEXPRESS;Initial Catalog=Active_Final_Commun;Integrated Security=True")
-
+        'Dim maConnexion As New SqlConnection("Data Source=DESKTOP-TA82I0L;Initial Catalog=Active_Final_Commun;Integrated Security=True")
         '--------------------------------------------------------recup nom et prenom collabo-------------------------------------
         Dim monCollabo As String = CB_Collabo.SelectedItem
         Dim monNom() As String = Split(monCollabo)

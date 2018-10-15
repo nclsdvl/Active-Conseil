@@ -6,7 +6,7 @@ Public Class Page_Accueil
 
     Private Sub BTN_Valider_Click(sender As Object, e As EventArgs) Handles BTN_Valider.Click
         Dim maConnexion As New SqlConnection("Data Source=DESKTOP-KDV6P4O\SQLEXPRESS;Initial Catalog=Active_Final_Commun;Integrated Security=True")
-
+        'Dim maConnexion As New SqlConnection("Data Source=DESKTOP-TA82I0L;Initial Catalog=Active_Final_Commun;Integrated Security=True")
 
 
 
