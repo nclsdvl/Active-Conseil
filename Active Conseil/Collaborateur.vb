@@ -8,7 +8,7 @@ Public Class Collaborateur
     Private Sub Client_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
-        Remplissage_CB_Collabo(Me)
+        Remplissage_CB_Collabo(Me.CB_Collabo)
 
 
 

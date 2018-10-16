@@ -6,7 +6,7 @@ Public Class Admin
 
     Private Sub TabCollab_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-
+        Remplissage_CB_Collabo(Me.CB_Collabo)
 
         CB_Collabo.Hide()
         GB_Civilite.Hide()
