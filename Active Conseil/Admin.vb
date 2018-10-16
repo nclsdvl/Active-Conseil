@@ -4,9 +4,10 @@ Public Class Admin
 
 
 
+
     Private Sub TabCollab_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Remplissage_CB_Collabo(Me.CB_Collabo)
+        Remplissage_CB_Collabo(CB_Collabo)
 
         CB_Collabo.Hide()
         GB_Civilite.Hide()
@@ -53,6 +54,16 @@ Public Class Admin
         TB_Ville.Enabled = True
         DTP_embauche.Enabled = True
         DTP_Fin.Enabled = True
+
+
+        If CB_Collabo.SelectedIndex <> -1 Then
+
+            Recup_Rue(Me.TB_NumRue, Me.CB_Collabo)
+            Recup_Date_Embau(Me.DTP_embauche, Me.CB_Collabo)
+            Recup_Tel(Me.TB_Tel, Me.CB_Collabo)
+            Recup_Ville_CP(Me.TB_Ville, Me.TB_CptAdresse, Me.CB_Collabo)
+
+        End If
     End Sub
 
     Private Sub RB_Ajout_CheckedChanged(sender As Object, e As EventArgs) Handles RB_Ajout.CheckedChanged
@@ -115,5 +126,10 @@ Public Class Admin
 
     Private Sub Quitter_Click(sender As Object, e As EventArgs) Handles Quitter.Click
         Me.Close()
+    End Sub
+
+    Private Sub CB_Collabo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CB_Collabo.SelectedIndexChanged
+
+
     End Sub
 End Class
