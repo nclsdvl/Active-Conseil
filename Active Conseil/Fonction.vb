@@ -14,7 +14,12 @@ Module Fonction_Recuperation_Donnees
 
         Try
             Dim Mycommand As SqlCommand = maConnexion.CreateCommand()
-            Mycommand.CommandText = "select NOM_COLLABORATEUR, PRENOM_COLLABORATEUR, ID_COLLABORATEUR from COLLABORATEUR order by NOM_COLLABORATEUR"
+            Mycommand.CommandText = "select 
+                                        NOM_COLLABORATEUR, PRENOM_COLLABORATEUR, ID_COLLABORATEUR 
+                                     from 
+                                        COLLABORATEUR 
+                                     order by 
+                                        NOM_COLLABORATEUR"
             maConnexion.Open()
             Dim myReader As SqlDataReader = Mycommand.ExecuteReader()
             nomForm.Items.Clear()
@@ -61,9 +66,13 @@ Module Fonction_Recuperation_Donnees
         Dim maConnexion As New SqlConnection(str_chaine_de_connexion)
 
         Dim Mycommand As SqlCommand = maConnexion.CreateCommand()
-        Mycommand.CommandText = "select TELEPHONE_COLLABORATEUR as phone from COLLABORATEUR
-                                    where NOM_COLLABORATEUR = '" & chaineNom(0) & "' 
-                                    and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
+        Mycommand.CommandText = "select 
+                                      TELEPHONE_COLLABORATEUR as phone 
+                                 from 
+                                        COLLABORATEUR
+                                  where 
+                                        NOM_COLLABORATEUR = '" & chaineNom(0) & "' 
+                                        and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
 
         maConnexion.Open()
 
@@ -84,9 +93,13 @@ Module Fonction_Recuperation_Donnees
         Dim maConnexion As New SqlConnection(str_chaine_de_connexion)
 
         Dim Mycommand As SqlCommand = maConnexion.CreateCommand()
-        Mycommand.CommandText = "select TELEPHONE_COLLABORATEUR as phone from COLLABORATEUR
-                                    where NOM_COLLABORATEUR = '" & chaineNom(0) & "' 
-                                    and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
+        Mycommand.CommandText = "select 
+                                      TELEPHONE_COLLABORATEUR as phone 
+                                 from 
+                                        COLLABORATEUR
+                                  where 
+                                        NOM_COLLABORATEUR = '" & chaineNom(0) & "' 
+                                        and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
 
         maConnexion.Open()
 
@@ -111,9 +124,13 @@ Module Fonction_Recuperation_Donnees
         Dim chaineNom() As String = Split(monCollabo)
         Dim maConnexion As New SqlConnection(str_chaine_de_connexion)
         Dim Mycommand2 As SqlCommand = maConnexion.CreateCommand()
-        Mycommand2.CommandText = "select DATE_PREMIERE_EMBAUCHE as date from COLLABORATEUR
-                                    where NOM_COLLABORATEUR = '" & chaineNom(0) & "' 
-                                    and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
+        Mycommand2.CommandText = "select 
+                                      DATE_PREMIERE_EMBAUCHE as date 
+                                  from 
+                                      COLLABORATEUR
+                                  where 
+                                       NOM_COLLABORATEUR = '" & chaineNom(0) & "' 
+                                       and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
         maConnexion.Open()
         Dim Requete2 As String
         If Mycommand2.ExecuteScalar Is DBNull.Value Then
@@ -136,9 +153,13 @@ Module Fonction_Recuperation_Donnees
         Dim chaineNom() As String = Split(monCollabo)
         Dim maConnexion As New SqlConnection(str_chaine_de_connexion)
         Dim Mycommand2 As SqlCommand = maConnexion.CreateCommand()
-        Mycommand2.CommandText = "select DATE_PREMIERE_EMBAUCHE as date from COLLABORATEUR
-                                    where NOM_COLLABORATEUR = '" & chaineNom(0) & "' 
-                                    and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
+        Mycommand2.CommandText = "select 
+                                      DATE_PREMIERE_EMBAUCHE as date 
+                                  from 
+                                      COLLABORATEUR
+                                  where 
+                                       NOM_COLLABORATEUR = '" & chaineNom(0) & "' 
+                                       and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
         maConnexion.Open()
         Dim Requete2 As String
         If Mycommand2.ExecuteScalar Is DBNull.Value Then
@@ -165,10 +186,15 @@ Module Fonction_Recuperation_Donnees
         Dim chaineNom() As String = Split(monCollabo)
         Dim maConnexion As New SqlConnection(str_chaine_de_connexion)
         Dim Mycommand4 As SqlCommand = maConnexion.CreateCommand()
-        Mycommand4.CommandText = "Select RUE_ADRESSE1 from ADRESSE, COLLABORATEUR
+
+        Mycommand4.CommandText = "Select 
+                                      RUE_ADRESSE1 
+                                  from 
+                                      ADRESSE, COLLABORATEUR
                                   where
-                                  Collaborateur.ID_ADRESSE = ADRESSE.ID_ADRESSE And
-                                  NOM_COLLABORATEUR = '" & chaineNom(0) & "'and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
+                                      Collaborateur.ID_ADRESSE = ADRESSE.ID_ADRESSE And
+                                      NOM_COLLABORATEUR = '" & chaineNom(0) & "'and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
+
         maConnexion.Open()
         Dim Requete4 As String = Mycommand4.ExecuteScalar
         Dim rue As String = Requete4.ToString
@@ -187,10 +213,15 @@ Module Fonction_Recuperation_Donnees
         Dim chaineNom() As String = Split(monCollabo)
         Dim maConnexion As New SqlConnection(str_chaine_de_connexion)
         Dim Mycommand4 As SqlCommand = maConnexion.CreateCommand()
-        Mycommand4.CommandText = "Select RUE_ADRESSE1 from ADRESSE, COLLABORATEUR
+
+        Mycommand4.CommandText = "Select 
+                                      RUE_ADRESSE1 
+                                  from 
+                                      ADRESSE, COLLABORATEUR
                                   where
-                                  Collaborateur.ID_ADRESSE = ADRESSE.ID_ADRESSE And
-                                  NOM_COLLABORATEUR = '" & chaineNom(0) & "'and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
+                                      Collaborateur.ID_ADRESSE = ADRESSE.ID_ADRESSE And
+                                      NOM_COLLABORATEUR = '" & chaineNom(0) & "'and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
+
         maConnexion.Open()
         Dim Requete4 As String = Mycommand4.ExecuteScalar
         Dim rue As String = Requete4.ToString
@@ -219,10 +250,13 @@ Module Fonction_Recuperation_Donnees
         '-- CODE POSTAL --
 
         Dim Mycommand5 As SqlCommand = maConnexion.CreateCommand()
-        Mycommand5.CommandText = "Select CP_ADRESSE from ADRESSE, COLLABORATEUR
+        Mycommand5.CommandText = "Select 
+                                      CP_ADRESSE 
+                                  from 
+                                      ADRESSE, COLLABORATEUR
                                   where
-                                  Collaborateur.ID_ADRESSE = ADRESSE.ID_ADRESSE And
-                                  NOM_COLLABORATEUR = '" & chaineNom(0) & "'and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
+                                      Collaborateur.ID_ADRESSE = ADRESSE.ID_ADRESSE And
+                                      NOM_COLLABORATEUR = '" & chaineNom(0) & "'and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
 
         Dim Requete5 As String = Mycommand5.ExecuteScalar
         Dim CP As String = Requete5.ToString
@@ -230,10 +264,13 @@ Module Fonction_Recuperation_Donnees
         '-- VILLE --
 
         Dim Mycommand6 As SqlCommand = maConnexion.CreateCommand()
-        Mycommand6.CommandText = "Select VILLE_ADRESSE from ADRESSE, COLLABORATEUR
+        Mycommand6.CommandText = "Select 
+                                     VILLE_ADRESSE 
+                                  from 
+                                     ADRESSE, COLLABORATEUR
                                   where
-                                  Collaborateur.ID_ADRESSE = ADRESSE.ID_ADRESSE And
-                                  NOM_COLLABORATEUR = '" & chaineNom(0) & "'and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
+                                     Collaborateur.ID_ADRESSE = ADRESSE.ID_ADRESSE And
+                                     NOM_COLLABORATEUR = '" & chaineNom(0) & "'and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
 
         Dim Requete6 As String = Mycommand6.ExecuteScalar
         Dim ville As String = Requete6.ToString
@@ -243,10 +280,13 @@ Module Fonction_Recuperation_Donnees
         '-- COMPLEMENT --
 
         Dim Mycommand7 As SqlCommand = maConnexion.CreateCommand()
-        Mycommand7.CommandText = "Select COMPLEMENT_ADRESSE2 from ADRESSE, COLLABORATEUR
+        Mycommand7.CommandText = "Select 
+                                        COMPLEMENT_ADRESSE2 
+                                  from 
+                                        ADRESSE, COLLABORATEUR
                                   where
-                                  Collaborateur.ID_ADRESSE = ADRESSE.ID_ADRESSE And
-                                  NOM_COLLABORATEUR = '" & chaineNom(0) & "'and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
+                                        Collaborateur.ID_ADRESSE = ADRESSE.ID_ADRESSE And
+                                        NOM_COLLABORATEUR = '" & chaineNom(0) & "'and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
 
         Dim Requete7 As String
 
@@ -277,10 +317,13 @@ Module Fonction_Recuperation_Donnees
         'CODE POSTAL -----------------
 
         Dim Mycommand5 As SqlCommand = maConnexion.CreateCommand()
-        Mycommand5.CommandText = "Select CP_ADRESSE from ADRESSE, COLLABORATEUR
+        Mycommand5.CommandText = "Select 
+                                        CP_ADRESSE 
+                                  from 
+                                        ADRESSE, COLLABORATEUR
                                   where
-                                  Collaborateur.ID_ADRESSE = ADRESSE.ID_ADRESSE And
-                                  NOM_COLLABORATEUR = '" & chaineNom(0) & "'and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
+                                        Collaborateur.ID_ADRESSE = ADRESSE.ID_ADRESSE And
+                                        NOM_COLLABORATEUR = '" & chaineNom(0) & "'and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
 
         Dim Requete5 As String = Mycommand5.ExecuteScalar
         Dim CP As String = Requete5.ToString
@@ -289,10 +332,13 @@ Module Fonction_Recuperation_Donnees
         'VILLE-----------------
 
         Dim Mycommand6 As SqlCommand = maConnexion.CreateCommand()
-        Mycommand6.CommandText = "Select VILLE_ADRESSE from ADRESSE, COLLABORATEUR
+        Mycommand6.CommandText = "Select 
+                                        VILLE_ADRESSE 
+                                  from 
+                                        ADRESSE, COLLABORATEUR
                                   where
-                                  Collaborateur.ID_ADRESSE = ADRESSE.ID_ADRESSE And
-                                  NOM_COLLABORATEUR = '" & chaineNom(0) & "'and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
+                                        Collaborateur.ID_ADRESSE = ADRESSE.ID_ADRESSE And
+                                        NOM_COLLABORATEUR = '" & chaineNom(0) & "'and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
 
         Dim Requete6 As String = Mycommand6.ExecuteScalar
         Dim ville As String = Requete6.ToString
@@ -302,10 +348,13 @@ Module Fonction_Recuperation_Donnees
         'COMPLEMENT ADRESSE--------
 
         Dim Mycommand7 As SqlCommand = maConnexion.CreateCommand()
-        Mycommand7.CommandText = "Select COMPLEMENT_ADRESSE2 from ADRESSE, COLLABORATEUR
+        Mycommand7.CommandText = "Select 
+                                        COMPLEMENT_ADRESSE2 
+                                  from 
+                                        ADRESSE, COLLABORATEUR
                                   where
-                                  Collaborateur.ID_ADRESSE = ADRESSE.ID_ADRESSE And
-                                  NOM_COLLABORATEUR = '" & chaineNom(0) & "'and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
+                                        Collaborateur.ID_ADRESSE = ADRESSE.ID_ADRESSE And
+                                        NOM_COLLABORATEUR = '" & chaineNom(0) & "'and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
 
         Dim Requete7 As String
 
