@@ -28,6 +28,8 @@ Partial Class Admin
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabCollab = New System.Windows.Forms.TabPage()
+        Me.TB_Fin = New System.Windows.Forms.TextBox()
+        Me.TB_Embauche = New System.Windows.Forms.TextBox()
         Me.Quitter = New System.Windows.Forms.Button()
         Me.BTN_Back = New System.Windows.Forms.Button()
         Me.BTN_Valider = New System.Windows.Forms.Button()
@@ -36,8 +38,6 @@ Partial Class Admin
         Me.RB_Mme = New System.Windows.Forms.RadioButton()
         Me.RB_Mlle = New System.Windows.Forms.RadioButton()
         Me.LB_Civilite = New System.Windows.Forms.Label()
-        Me.DTP_Fin = New System.Windows.Forms.DateTimePicker()
-        Me.DTP_embauche = New System.Windows.Forms.DateTimePicker()
         Me.TB_Tel = New System.Windows.Forms.TextBox()
         Me.TB_Prenom = New System.Windows.Forms.TextBox()
         Me.TB_Nom = New System.Windows.Forms.TextBox()
@@ -60,6 +60,12 @@ Partial Class Admin
         Me.RB_Modif = New System.Windows.Forms.RadioButton()
         Me.TabClient = New System.Windows.Forms.TabPage()
         Me.TabProjet = New System.Windows.Forms.TabPage()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabCollab.SuspendLayout()
         Me.GB_Civilite.SuspendLayout()
@@ -92,12 +98,18 @@ Partial Class Admin
         'TabCollab
         '
         Me.TabCollab.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.TabCollab.Controls.Add(Me.Label7)
+        Me.TabCollab.Controls.Add(Me.Label6)
+        Me.TabCollab.Controls.Add(Me.Label5)
+        Me.TabCollab.Controls.Add(Me.Label4)
+        Me.TabCollab.Controls.Add(Me.Label3)
+        Me.TabCollab.Controls.Add(Me.Label2)
+        Me.TabCollab.Controls.Add(Me.TB_Fin)
+        Me.TabCollab.Controls.Add(Me.TB_Embauche)
         Me.TabCollab.Controls.Add(Me.Quitter)
         Me.TabCollab.Controls.Add(Me.BTN_Back)
         Me.TabCollab.Controls.Add(Me.BTN_Valider)
         Me.TabCollab.Controls.Add(Me.GB_Civilite)
-        Me.TabCollab.Controls.Add(Me.DTP_Fin)
-        Me.TabCollab.Controls.Add(Me.DTP_embauche)
         Me.TabCollab.Controls.Add(Me.TB_Tel)
         Me.TabCollab.Controls.Add(Me.TB_Prenom)
         Me.TabCollab.Controls.Add(Me.TB_Nom)
@@ -125,6 +137,21 @@ Partial Class Admin
         Me.TabCollab.TabIndex = 0
         Me.TabCollab.Text = "COLLABORATEUR"
         '
+        'TB_Fin
+        '
+        Me.TB_Fin.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TB_Fin.Location = New System.Drawing.Point(170, 366)
+        Me.TB_Fin.Name = "TB_Fin"
+        Me.TB_Fin.Size = New System.Drawing.Size(200, 22)
+        Me.TB_Fin.TabIndex = 32
+        '
+        'TB_Embauche
+        '
+        Me.TB_Embauche.Location = New System.Drawing.Point(170, 340)
+        Me.TB_Embauche.Name = "TB_Embauche"
+        Me.TB_Embauche.Size = New System.Drawing.Size(200, 20)
+        Me.TB_Embauche.TabIndex = 31
+        '
         'Quitter
         '
         Me.Quitter.BackColor = System.Drawing.SystemColors.ActiveCaptionText
@@ -149,7 +176,7 @@ Partial Class Admin
         '
         'BTN_Valider
         '
-        Me.BTN_Valider.Location = New System.Drawing.Point(395, 449)
+        Me.BTN_Valider.Location = New System.Drawing.Point(395, 422)
         Me.BTN_Valider.Name = "BTN_Valider"
         Me.BTN_Valider.Size = New System.Drawing.Size(221, 58)
         Me.BTN_Valider.TabIndex = 28
@@ -215,21 +242,6 @@ Partial Class Admin
         Me.LB_Civilite.TabIndex = 8
         Me.LB_Civilite.Text = "Civilité :"
         '
-        'DTP_Fin
-        '
-        Me.DTP_Fin.Location = New System.Drawing.Point(170, 373)
-        Me.DTP_Fin.Name = "DTP_Fin"
-        Me.DTP_Fin.Size = New System.Drawing.Size(200, 20)
-        Me.DTP_Fin.TabIndex = 26
-        Me.DTP_Fin.Value = New Date(2018, 10, 3, 0, 0, 0, 0)
-        '
-        'DTP_embauche
-        '
-        Me.DTP_embauche.Location = New System.Drawing.Point(170, 340)
-        Me.DTP_embauche.Name = "DTP_embauche"
-        Me.DTP_embauche.Size = New System.Drawing.Size(200, 20)
-        Me.DTP_embauche.TabIndex = 25
-        '
         'TB_Tel
         '
         Me.TB_Tel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -257,7 +269,7 @@ Partial Class Admin
         'TB_Ville
         '
         Me.TB_Ville.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TB_Ville.Location = New System.Drawing.Point(715, 366)
+        Me.TB_Ville.Location = New System.Drawing.Point(717, 342)
         Me.TB_Ville.Name = "TB_Ville"
         Me.TB_Ville.Size = New System.Drawing.Size(218, 22)
         Me.TB_Ville.TabIndex = 17
@@ -265,7 +277,7 @@ Partial Class Admin
         'TB_CP
         '
         Me.TB_CP.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TB_CP.Location = New System.Drawing.Point(715, 338)
+        Me.TB_CP.Location = New System.Drawing.Point(717, 314)
         Me.TB_CP.Name = "TB_CP"
         Me.TB_CP.Size = New System.Drawing.Size(218, 22)
         Me.TB_CP.TabIndex = 16
@@ -273,7 +285,7 @@ Partial Class Admin
         'TB_CptAdresse
         '
         Me.TB_CptAdresse.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TB_CptAdresse.Location = New System.Drawing.Point(715, 312)
+        Me.TB_CptAdresse.Location = New System.Drawing.Point(717, 288)
         Me.TB_CptAdresse.Name = "TB_CptAdresse"
         Me.TB_CptAdresse.Size = New System.Drawing.Size(218, 22)
         Me.TB_CptAdresse.TabIndex = 15
@@ -281,7 +293,7 @@ Partial Class Admin
         'TB_NumRue
         '
         Me.TB_NumRue.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TB_NumRue.Location = New System.Drawing.Point(715, 283)
+        Me.TB_NumRue.Location = New System.Drawing.Point(717, 259)
         Me.TB_NumRue.Name = "TB_NumRue"
         Me.TB_NumRue.Size = New System.Drawing.Size(218, 22)
         Me.TB_NumRue.TabIndex = 14
@@ -290,7 +302,7 @@ Partial Class Admin
         '
         Me.LB_Fin.AutoSize = True
         Me.LB_Fin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LB_Fin.Location = New System.Drawing.Point(13, 374)
+        Me.LB_Fin.Location = New System.Drawing.Point(13, 366)
         Me.LB_Fin.Name = "LB_Fin"
         Me.LB_Fin.Size = New System.Drawing.Size(149, 20)
         Me.LB_Fin.TabIndex = 13
@@ -340,7 +352,7 @@ Partial Class Admin
         '
         Me.LB_Ville.AutoSize = True
         Me.LB_Ville.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LB_Ville.Location = New System.Drawing.Point(663, 362)
+        Me.LB_Ville.Location = New System.Drawing.Point(665, 338)
         Me.LB_Ville.Name = "LB_Ville"
         Me.LB_Ville.Size = New System.Drawing.Size(46, 20)
         Me.LB_Ville.TabIndex = 7
@@ -350,7 +362,7 @@ Partial Class Admin
         '
         Me.LB_Cplt_Adresse.AutoSize = True
         Me.LB_Cplt_Adresse.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LB_Cplt_Adresse.Location = New System.Drawing.Point(529, 310)
+        Me.LB_Cplt_Adresse.Location = New System.Drawing.Point(531, 286)
         Me.LB_Cplt_Adresse.Name = "LB_Cplt_Adresse"
         Me.LB_Cplt_Adresse.Size = New System.Drawing.Size(180, 20)
         Me.LB_Cplt_Adresse.TabIndex = 6
@@ -360,7 +372,7 @@ Partial Class Admin
         '
         Me.LB_CP.AutoSize = True
         Me.LB_CP.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LB_CP.Location = New System.Drawing.Point(606, 338)
+        Me.LB_CP.Location = New System.Drawing.Point(608, 314)
         Me.LB_CP.Name = "LB_CP"
         Me.LB_CP.Size = New System.Drawing.Size(103, 20)
         Me.LB_CP.TabIndex = 5
@@ -370,7 +382,7 @@ Partial Class Admin
         '
         Me.LB_Rue.AutoSize = True
         Me.LB_Rue.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LB_Rue.Location = New System.Drawing.Point(598, 283)
+        Me.LB_Rue.Location = New System.Drawing.Point(600, 259)
         Me.LB_Rue.Name = "LB_Rue"
         Me.LB_Rue.Size = New System.Drawing.Size(111, 20)
         Me.LB_Rue.TabIndex = 4
@@ -440,6 +452,73 @@ Partial Class Admin
         Me.TabProjet.TabIndex = 2
         Me.TabProjet.Text = "PROJET"
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(376, 259)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(15, 20)
+        Me.Label2.TabIndex = 33
+        Me.Label2.Text = "*"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(376, 290)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(15, 20)
+        Me.Label3.TabIndex = 34
+        Me.Label3.Text = "*"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(376, 316)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(15, 20)
+        Me.Label4.TabIndex = 35
+        Me.Label4.Text = "*"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(941, 261)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(15, 20)
+        Me.Label5.TabIndex = 36
+        Me.Label5.Text = "*"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(941, 316)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(15, 20)
+        Me.Label6.TabIndex = 37
+        Me.Label6.Text = "*"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label7.Location = New System.Drawing.Point(941, 344)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(15, 20)
+        Me.Label7.TabIndex = 38
+        Me.Label7.Text = "*"
+        '
         'Admin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -467,8 +546,6 @@ Partial Class Admin
     Friend WithEvents TabCollab As TabPage
     Friend WithEvents TabClient As TabPage
     Friend WithEvents TabProjet As TabPage
-    Friend WithEvents DTP_Fin As DateTimePicker
-    Friend WithEvents DTP_embauche As DateTimePicker
     Friend WithEvents RB_Mlle As RadioButton
     Friend WithEvents RB_Mr As RadioButton
     Friend WithEvents RB_Mme As RadioButton
@@ -497,4 +574,12 @@ Partial Class Admin
     Friend WithEvents BTN_Valider As Button
     Friend WithEvents BTN_Back As Button
     Friend WithEvents Quitter As Button
+    Friend WithEvents TB_Fin As TextBox
+    Friend WithEvents TB_Embauche As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
 End Class

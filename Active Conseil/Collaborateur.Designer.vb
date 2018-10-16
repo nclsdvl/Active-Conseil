@@ -73,31 +73,31 @@ Partial Class Collaborateur
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(23, 152)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(106, 18)
+        Me.Label3.Size = New System.Drawing.Size(103, 20)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Telephone :"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(12, 207)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(160, 18)
+        Me.Label4.Size = New System.Drawing.Size(160, 20)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Date d'embauche :"
         '
         'CB_Collabo
         '
         Me.CB_Collabo.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.CB_Collabo.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CB_Collabo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CB_Collabo.FormattingEnabled = True
         Me.CB_Collabo.Location = New System.Drawing.Point(322, 62)
         Me.CB_Collabo.Name = "CB_Collabo"
-        Me.CB_Collabo.Size = New System.Drawing.Size(217, 22)
+        Me.CB_Collabo.Size = New System.Drawing.Size(217, 21)
         Me.CB_Collabo.TabIndex = 8
         '
         'COLLABORATEURBindingSource
@@ -163,97 +163,97 @@ Partial Class Collaborateur
         'LB_Phone
         '
         Me.LB_Phone.AutoSize = True
-        Me.LB_Phone.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LB_Phone.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LB_Phone.Location = New System.Drawing.Point(184, 152)
         Me.LB_Phone.Name = "LB_Phone"
-        Me.LB_Phone.Size = New System.Drawing.Size(0, 17)
+        Me.LB_Phone.Size = New System.Drawing.Size(0, 20)
         Me.LB_Phone.TabIndex = 10
         '
         'LB_Embauche
         '
         Me.LB_Embauche.AutoSize = True
-        Me.LB_Embauche.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LB_Embauche.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LB_Embauche.Location = New System.Drawing.Point(184, 208)
         Me.LB_Embauche.Name = "LB_Embauche"
-        Me.LB_Embauche.Size = New System.Drawing.Size(0, 17)
+        Me.LB_Embauche.Size = New System.Drawing.Size(0, 20)
         Me.LB_Embauche.TabIndex = 11
         '
         'LB_Techno
         '
         Me.LB_Techno.AutoSize = True
-        Me.LB_Techno.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LB_Techno.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LB_Techno.Location = New System.Drawing.Point(87, 296)
         Me.LB_Techno.Name = "LB_Techno"
-        Me.LB_Techno.Size = New System.Drawing.Size(186, 18)
+        Me.LB_Techno.Size = New System.Drawing.Size(187, 20)
         Me.LB_Techno.TabIndex = 12
         Me.LB_Techno.Text = "Technologies Maitrisées :"
         '
         'L_Techno
         '
         Me.L_Techno.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.L_Techno.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Techno.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.L_Techno.FormattingEnabled = True
-        Me.L_Techno.ItemHeight = 17
+        Me.L_Techno.ItemHeight = 20
         Me.L_Techno.Location = New System.Drawing.Point(90, 333)
         Me.L_Techno.Name = "L_Techno"
-        Me.L_Techno.Size = New System.Drawing.Size(174, 191)
+        Me.L_Techno.Size = New System.Drawing.Size(174, 184)
         Me.L_Techno.TabIndex = 13
         '
         'LB_Adresse
         '
         Me.LB_Adresse.AutoSize = True
-        Me.LB_Adresse.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LB_Adresse.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LB_Adresse.Location = New System.Drawing.Point(409, 151)
         Me.LB_Adresse.Name = "LB_Adresse"
-        Me.LB_Adresse.Size = New System.Drawing.Size(83, 18)
+        Me.LB_Adresse.Size = New System.Drawing.Size(85, 20)
         Me.LB_Adresse.TabIndex = 14
         Me.LB_Adresse.Text = "Adresse :"
         '
         'LB_Rue
         '
         Me.LB_Rue.AutoSize = True
-        Me.LB_Rue.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LB_Rue.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LB_Rue.Location = New System.Drawing.Point(498, 153)
         Me.LB_Rue.Name = "LB_Rue"
-        Me.LB_Rue.Size = New System.Drawing.Size(0, 17)
+        Me.LB_Rue.Size = New System.Drawing.Size(0, 20)
         Me.LB_Rue.TabIndex = 15
         '
         'LB_Ville
         '
         Me.LB_Ville.AutoSize = True
-        Me.LB_Ville.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LB_Ville.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LB_Ville.Location = New System.Drawing.Point(498, 187)
         Me.LB_Ville.Name = "LB_Ville"
-        Me.LB_Ville.Size = New System.Drawing.Size(0, 17)
+        Me.LB_Ville.Size = New System.Drawing.Size(0, 20)
         Me.LB_Ville.TabIndex = 16
         '
         'LB_complement
         '
         Me.LB_complement.AutoSize = True
-        Me.LB_complement.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LB_complement.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LB_complement.Location = New System.Drawing.Point(498, 170)
         Me.LB_complement.Name = "LB_complement"
-        Me.LB_complement.Size = New System.Drawing.Size(0, 17)
+        Me.LB_complement.Size = New System.Drawing.Size(0, 20)
         Me.LB_complement.TabIndex = 17
         '
         'L_Projet
         '
         Me.L_Projet.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.L_Projet.Font = New System.Drawing.Font("Copperplate Gothic Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Projet.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.L_Projet.FormattingEnabled = True
-        Me.L_Projet.ItemHeight = 14
+        Me.L_Projet.ItemHeight = 16
         Me.L_Projet.Location = New System.Drawing.Point(354, 333)
         Me.L_Projet.Name = "L_Projet"
-        Me.L_Projet.Size = New System.Drawing.Size(425, 186)
+        Me.L_Projet.Size = New System.Drawing.Size(425, 180)
         Me.L_Projet.TabIndex = 18
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(524, 296)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(67, 18)
+        Me.Label2.Size = New System.Drawing.Size(66, 20)
         Me.Label2.TabIndex = 19
         Me.Label2.Text = "Projets :"
         '
