@@ -7,16 +7,16 @@ Public Class Collaborateur
 
     Private Sub Client_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Remplissage_CB_Collabo()
+
+        Remplissage_CB_Collabo(Me)
 
 
-        '----------------------------------------------------------------------------------------------------------------------------------------
 
     End Sub
 
     Private Sub CB_Collabo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CB_Collabo.SelectedIndexChanged
 
-        'Dim maConnexion As New SqlConnection("Data Source=DESKTOP-KDV6P4O\SQLEXPRESS;Initial Catalog=Active_Final_Commun;Integrated Security=True")
+
         Dim maConnexion As New SqlConnection(str_chaine_de_connexion)
         '--------------------------------------------------------recup nom et prenom collabo-------------------------------------
         Dim monCollabo As String = CB_Collabo.SelectedItem

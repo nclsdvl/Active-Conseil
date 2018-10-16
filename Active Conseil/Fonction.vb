@@ -4,7 +4,7 @@ Module Fonction
 
 
 
-    Public Function Remplissage_CB_Collabo() As Object
+    Public Function Remplissage_CB_Collabo(nomForm) As ComboBox
 
         '--------------------------------------------------------------------REMPLISSAGE CBBOX-------------------------------------------
 
@@ -15,11 +15,11 @@ Module Fonction
             Mycommand.CommandText = "select NOM_COLLABORATEUR, PRENOM_COLLABORATEUR, ID_COLLABORATEUR from COLLABORATEUR order by NOM_COLLABORATEUR"
             maConnexion.Open()
             Dim myReader As SqlDataReader = Mycommand.ExecuteReader()
-            CB_Collabo.Items.Clear()
+            nomForm.CB_Collabo.Items.Clear()
             Do While myReader.Read()
                 Dim tmp_chaine As String
                 tmp_chaine = myReader.GetString(0) + " " + myReader.GetString(1) + " (" + myReader.GetValue(2).ToString() + ")"
-                CB_Collabo.Items.Add(tmp_chaine)
+                nomForm.CB_Collabo.Items.Add(tmp_chaine)
             Loop
             myReader.Close()
             maConnexion.Close()
@@ -27,6 +27,7 @@ Module Fonction
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+
         Return CB_Collabo
 
     End Function

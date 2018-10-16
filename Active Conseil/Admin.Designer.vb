@@ -28,6 +28,9 @@ Partial Class Admin
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabCollab = New System.Windows.Forms.TabPage()
+        Me.Quitter = New System.Windows.Forms.Button()
+        Me.BTN_Back = New System.Windows.Forms.Button()
+        Me.BTN_Valider = New System.Windows.Forms.Button()
         Me.GB_Civilite = New System.Windows.Forms.GroupBox()
         Me.RB_Mr = New System.Windows.Forms.RadioButton()
         Me.RB_Mme = New System.Windows.Forms.RadioButton()
@@ -57,9 +60,6 @@ Partial Class Admin
         Me.RB_Modif = New System.Windows.Forms.RadioButton()
         Me.TabClient = New System.Windows.Forms.TabPage()
         Me.TabProjet = New System.Windows.Forms.TabPage()
-        Me.BTN_Valider = New System.Windows.Forms.Button()
-        Me.BTN_Back = New System.Windows.Forms.Button()
-        Me.Quitter = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabCollab.SuspendLayout()
         Me.GB_Civilite.SuspendLayout()
@@ -124,6 +124,37 @@ Partial Class Admin
         Me.TabCollab.Size = New System.Drawing.Size(1025, 528)
         Me.TabCollab.TabIndex = 0
         Me.TabCollab.Text = "COLLABORATEUR"
+        '
+        'Quitter
+        '
+        Me.Quitter.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Quitter.Image = CType(resources.GetObject("Quitter.Image"), System.Drawing.Image)
+        Me.Quitter.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Quitter.Location = New System.Drawing.Point(970, 464)
+        Me.Quitter.Name = "Quitter"
+        Me.Quitter.Size = New System.Drawing.Size(43, 43)
+        Me.Quitter.TabIndex = 30
+        Me.Quitter.UseVisualStyleBackColor = False
+        '
+        'BTN_Back
+        '
+        Me.BTN_Back.BackgroundImage = CType(resources.GetObject("BTN_Back.BackgroundImage"), System.Drawing.Image)
+        Me.BTN_Back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BTN_Back.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.BTN_Back.Location = New System.Drawing.Point(970, 15)
+        Me.BTN_Back.Name = "BTN_Back"
+        Me.BTN_Back.Size = New System.Drawing.Size(43, 43)
+        Me.BTN_Back.TabIndex = 29
+        Me.BTN_Back.UseVisualStyleBackColor = True
+        '
+        'BTN_Valider
+        '
+        Me.BTN_Valider.Location = New System.Drawing.Point(395, 449)
+        Me.BTN_Valider.Name = "BTN_Valider"
+        Me.BTN_Valider.Size = New System.Drawing.Size(221, 58)
+        Me.BTN_Valider.TabIndex = 28
+        Me.BTN_Valider.Text = "ENREGISTRER"
+        Me.BTN_Valider.UseVisualStyleBackColor = True
         '
         'GB_Civilite
         '
@@ -190,6 +221,7 @@ Partial Class Admin
         Me.DTP_Fin.Name = "DTP_Fin"
         Me.DTP_Fin.Size = New System.Drawing.Size(200, 20)
         Me.DTP_Fin.TabIndex = 26
+        Me.DTP_Fin.Value = New Date(2018, 10, 3, 0, 0, 0, 0)
         '
         'DTP_embauche
         '
@@ -407,37 +439,6 @@ Partial Class Admin
         Me.TabProjet.Size = New System.Drawing.Size(1025, 528)
         Me.TabProjet.TabIndex = 2
         Me.TabProjet.Text = "PROJET"
-        '
-        'BTN_Valider
-        '
-        Me.BTN_Valider.Location = New System.Drawing.Point(395, 449)
-        Me.BTN_Valider.Name = "BTN_Valider"
-        Me.BTN_Valider.Size = New System.Drawing.Size(221, 58)
-        Me.BTN_Valider.TabIndex = 28
-        Me.BTN_Valider.Text = "ENREGISTRER"
-        Me.BTN_Valider.UseVisualStyleBackColor = True
-        '
-        'BTN_Back
-        '
-        Me.BTN_Back.BackgroundImage = CType(resources.GetObject("BTN_Back.BackgroundImage"), System.Drawing.Image)
-        Me.BTN_Back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BTN_Back.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.BTN_Back.Location = New System.Drawing.Point(970, 15)
-        Me.BTN_Back.Name = "BTN_Back"
-        Me.BTN_Back.Size = New System.Drawing.Size(43, 43)
-        Me.BTN_Back.TabIndex = 29
-        Me.BTN_Back.UseVisualStyleBackColor = True
-        '
-        'Quitter
-        '
-        Me.Quitter.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Quitter.Image = CType(resources.GetObject("Quitter.Image"), System.Drawing.Image)
-        Me.Quitter.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Quitter.Location = New System.Drawing.Point(970, 464)
-        Me.Quitter.Name = "Quitter"
-        Me.Quitter.Size = New System.Drawing.Size(43, 43)
-        Me.Quitter.TabIndex = 30
-        Me.Quitter.UseVisualStyleBackColor = False
         '
         'Admin
         '

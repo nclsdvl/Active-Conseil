@@ -38,6 +38,8 @@ Public Class Admin
         TB_Ville.Show()
         DTP_embauche.Show()
         DTP_Fin.Show()
+        DTP_Fin.Format = DateTimePickerFormat.Custom
+        DTP_Fin.CustomFormat = " "
         BTN_Valider.Show()
 
         GB_Civilite.Enabled = True
