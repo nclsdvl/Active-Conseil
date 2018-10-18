@@ -191,12 +191,12 @@ Partial Class Collaborateur
         'L_Techno
         '
         Me.L_Techno.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.L_Techno.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Techno.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.L_Techno.FormattingEnabled = True
-        Me.L_Techno.ItemHeight = 20
+        Me.L_Techno.ItemHeight = 16
         Me.L_Techno.Location = New System.Drawing.Point(90, 333)
         Me.L_Techno.Name = "L_Techno"
-        Me.L_Techno.Size = New System.Drawing.Size(174, 184)
+        Me.L_Techno.Size = New System.Drawing.Size(174, 180)
         Me.L_Techno.TabIndex = 13
         '
         'LB_Adresse

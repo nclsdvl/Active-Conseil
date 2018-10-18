@@ -66,6 +66,7 @@
 
     Private Sub RB_Ajout_CheckedChanged(sender As Object, e As EventArgs) Handles RB_Ajout.CheckedChanged
 
+
         '--------------NETTOYAGE DES ITEMS
         TB_CP.Clear()
         TB_CptAdresse.Clear()
@@ -170,7 +171,6 @@
     Private Sub BTN_Valider_Click(sender As Object, e As EventArgs) Handles BTN_Valider.Click
 
 
-
         '----------------------------------------      BOUTON VALIDER -> LANCEMENT DES FONCTIONS UPDATE             ------------------------------------------------
 
 
@@ -185,8 +185,13 @@
 
                 If result = DialogResult.Yes Then
                     Try
+                        'MsgBox(Check_Double_Adresse(CB_Collabo).ToString)
+                        If Check_Double_Adresse(CB_Collabo) > 1 Then
+                            MsgBox("ATTENTION plusieurs personnes habitent à cette adresse." + Chr(10) + "Si vous souhaitez modifier l'adresse, il va falloir creer une nouvelle adresse...")
+                        End If
                         Update_Adresse(Me.CB_Collabo, Me.TB_CP, Me.TB_CptAdresse, Me.TB_NumRue, Me.TB_Ville)
                         Update_Collabo(Me.CB_Collabo, Me.TB_Nom, Me.TB_Prenom, Me.TB_Tel)
+
                         MsgBox("Modification Effectuée!")
                     Catch ex As Exception
                         MsgBox("Echec de la Modification du collaborateur!" + Chr(10) + "Merci de vérifier la cohérence des informations saisies")
@@ -214,6 +219,10 @@
 
         Else MsgBox("Vous devez choisir une action (modifier, creer, ou consulter)")
         End If
+
+
+        CB_Collabo.Items.Clear()
+        Remplissage_CB_Collabo(CB_Collabo)
     End Sub
 
 
@@ -232,5 +241,9 @@
 
     Private Sub Quitter_Click(sender As Object, e As EventArgs) Handles Quitter.Click
         Me.Close()
+    End Sub
+
+    Private Sub RB_Ajout_CursorChanged(sender As Object, e As EventArgs) Handles RB_Ajout.CursorChanged
+        CB_Collabo.SelectedIndex = 0
     End Sub
 End Class

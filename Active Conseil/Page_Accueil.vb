@@ -68,4 +68,8 @@ Public Class Page_Accueil
     Private Sub Quitter_Click(sender As Object, e As EventArgs) Handles Quitter.Click
         Me.Close()
     End Sub
+
+    Private Sub Page_Accueil_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

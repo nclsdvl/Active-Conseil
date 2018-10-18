@@ -30,7 +30,7 @@ Module Update
         Mycommand.Parameters.Add(New SqlParameter("@Ville", SqlDbType.VarChar))
         Mycommand.Parameters("@Ville").Value = TB_Ville.Text
 
-        Mycommand.Parameters.Add(New SqlParameter("@ID_Collab", SqlDbType.VarChar))
+        Mycommand.Parameters.Add(New SqlParameter("@ID_Collab", SqlDbType.Int))
         Mycommand.Parameters("@ID_Collab").Value = CInt(chaineNom(2).Replace(")", "").Replace("(", "")) '   <--   RECUPERATION DE L'ID_COLLABORATEUR
 
         Mycommand.ExecuteScalar()
@@ -39,7 +39,7 @@ Module Update
 
 
     '|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-    '|------------------------------------------------               FONCTION UPDATE ADRESSE                   --------------------------------------------|
+    '|------------------------------------------------               FONCTION UPDATE COLLABORATEUR                   --------------------------------------------|
     '|-----------------------------------------------------------------------------------------------------------------------------------------------------|
 
     '------------------manque DATE-------------------
@@ -49,11 +49,12 @@ Module Update
 
 
         Dim monCollabo As String = CB_Collabo.SelectedItem
+
         Dim chaineNom() As String = Split(monCollabo)
 
 
         Dim maConnexion As New SqlConnection(str_chaine_de_connexion)
-        Dim Mycommand As New SqlCommand("Up_Adresse", maConnexion)
+        Dim Mycommand As New SqlCommand("Update_Collabo", maConnexion)
         Mycommand.CommandType = CommandType.StoredProcedure
         maConnexion.Open()
 
@@ -64,7 +65,7 @@ Module Update
         Mycommand.Parameters("@prenom").Value = TB_Prenom.Text
 
         Mycommand.Parameters.Add(New SqlParameter("@tel", SqlDbType.VarChar)) 'PB TYPAGE?????????????????????????????
-        Mycommand.Parameters("@tel").Value = TB_Tel.Text
+        Mycommand.Parameters("@tel").Value = TB_Tel.Text.Replace("-", "").Replace("/", "")
 
         Mycommand.Parameters.Add(New SqlParameter("@ID_Collab", SqlDbType.Int))
         Mycommand.Parameters("@ID_Collab").Value = CInt(chaineNom(2).Replace(")", "").Replace("(", "")) '   <--   RECUPERATION DE L'ID_COLLABORATEUR
@@ -72,6 +73,35 @@ Module Update
         Mycommand.ExecuteScalar()
         maConnexion.Close()
 
+
+
     End Function
+
+
+    Public Function Check_Double_Adresse(CB_Collabo As ComboBox)
+
+        Dim monCollabo As String = CB_Collabo.SelectedItem
+        Dim chaineNom() As String = Split(monCollabo)
+
+
+        Dim maConnexion As New SqlConnection(str_chaine_de_connexion)
+        Dim Mycommand As New SqlCommand("PS_Check_Double_Adresse", maConnexion)
+        Mycommand.CommandType = CommandType.StoredProcedure
+        maConnexion.Open()
+
+        Mycommand.Parameters.Add(New SqlParameter("@ID_Collabo", SqlDbType.Int))
+        Mycommand.Parameters("@ID_Collabo").Value = CInt(chaineNom(2).Replace(")", "").Replace("(", "")) '   <--   RECUPERATION DE L'ID_COLLABORATEUR
+
+        Dim valeurAjouter3 As SqlParameter = Mycommand.Parameters.Add("@return_value", SqlDbType.Int)
+        valeurAjouter3.Direction = ParameterDirection.ReturnValue
+
+        Mycommand.ExecuteNonQuery()
+        maConnexion.Close()
+
+        Return valeurAjouter3.Value
+
+    End Function
+
+
 
 End Module

@@ -389,8 +389,8 @@ Module Fonction_Recuperation_Donnees
                                   where
                                         NOM_COLLABORATEUR = '" & chaineNom(0) & "'and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
         maConnexion.Open()
-        Dim Requete10 As String = Mycommand10.ExecuteScalar
-        Dim civilite As String = Requete10.ToString
+        Dim Requete10 As String = Mycommand10.ExecuteScalar.ToString
+        Dim civilite As String = Requete10
         If civilite = "MR" Then
             RB_Mr.Checked = True
         ElseIf civilite = "MME" Then

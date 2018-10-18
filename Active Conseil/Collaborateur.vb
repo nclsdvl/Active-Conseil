@@ -103,6 +103,7 @@ Public Class Collaborateur
         myReader3.Close()
         maConnexion.Close()
 
+
     End Sub
 
     '|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -117,4 +118,6 @@ Public Class Collaborateur
         Choix.Show()
         Me.Hide()
     End Sub
+
+
 End Class
