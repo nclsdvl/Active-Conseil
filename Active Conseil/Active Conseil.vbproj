@@ -119,6 +119,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Update.vb" />
     <Compile Include="variables.vb" />
   </ItemGroup>
   <ItemGroup>

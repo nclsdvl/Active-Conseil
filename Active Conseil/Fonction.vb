@@ -97,7 +97,7 @@ Module Fonction_Recuperation_Donnees
                                       TELEPHONE_COLLABORATEUR as phone 
                                  from 
                                         COLLABORATEUR
-                                  where 
+                                 where 
                                         NOM_COLLABORATEUR = '" & chaineNom(0) & "' 
                                         and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
 

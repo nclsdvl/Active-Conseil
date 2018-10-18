@@ -2,29 +2,31 @@
 
 
 
-    '------------------------------CHARGEMENT DE LA COMBOBOX AU CHARGEMENT DE LA PAGE + PREPARATION DE LA PAGE ------------------------------------------------------------------
+    '---------------------             CHARGEMENT DE LA COMBOBOX COLLABO AU CHARGEMENT DE LA PAGE + PREPARATION DE LA PAGE          -----------------------------------------
 
     Private Sub TabCollab_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Remplissage_CB_Collabo(CB_Collabo)
 
-        '--------------MASQUAGE DES ITEMS
-        CB_Collabo.Hide()
-        GB_Civilite.Hide()
-        TB_CP.Hide()
-        TB_CptAdresse.Hide()
-        TB_Nom.Hide()
-        TB_NumRue.Hide()
-        TB_Prenom.Hide()
-        TB_Tel.Hide()
-        TB_Ville.Hide()
-        TB_Embauche.Hide()
-        TB_Fin.Hide()
+        '--------------DESACTIVATION DES ITEMS (pas d'action sélectionné)
+
+
+        GB_Civilite.Enabled = False
+        GB_Civilite.Enabled = False
+        TB_CP.Enabled = False
+        TB_CptAdresse.Enabled = False
+        TB_Nom.Enabled = False
+        TB_NumRue.Enabled = False
+        TB_Prenom.Enabled = False
+        TB_Tel.Enabled = False
+        TB_Ville.Enabled = False
+        TB_Embauche.Enabled = False
+        TB_Fin.Enabled = False
 
     End Sub
 
 
-    '------------------------------------------RADIOBOX EN POSITION : MODIFIER LES INFOS D'UN COLLABO ------------------------------------------------
+    '------------------------------------------        RADIOBOX = MODIFIER LES INFOS D'UN COLLABO      ------------------------------------------------
 
 
     Private Sub RB_Modif_CheckedChanged(sender As Object, e As EventArgs) Handles RB_Modif.CheckedChanged
@@ -60,7 +62,7 @@
 
     End Sub
 
-    '------------------------------------------RADIOBOX EN POSITION : CREER NOUVEAU COLLABO ------------------------------------------------
+    '------------------------------------------              RADIOBOX = CREER NOUVEAU COLLABO          ------------------------------------------------
 
     Private Sub RB_Ajout_CheckedChanged(sender As Object, e As EventArgs) Handles RB_Ajout.CheckedChanged
 
@@ -108,7 +110,7 @@
     End Sub
 
 
-    '------------------------------------------RADIOBOX EN POSITION : CONSULTER LES INFOS D'UN COLLABO ------------------------------------------------
+    '------------------------------------------            RADIOBOX = CONSULTER LES INFOS D'UN COLLABO            ------------------------------------------------
 
 
     Private Sub RB_Consult_CheckedChanged(sender As Object, e As EventArgs) Handles RB_Consult.CheckedChanged
@@ -116,14 +118,16 @@
         '-------------AFFICCHAGE DES ITEMS
         CB_Collabo.Show()
         GB_Civilite.Show()
-        TB_CP.Show()
-        TB_CptAdresse.Show()
         TB_Nom.Show()
-        TB_NumRue.Show()
         TB_Prenom.Show()
         TB_Tel.Show()
+        TB_CP.Show()
+        TB_CptAdresse.Show()
+        TB_NumRue.Show()
         TB_Ville.Show()
         BTN_Valider.Hide()
+
+
 
         '-------------DESACTIVATION DES ITEMS
 
@@ -143,7 +147,7 @@
     End Sub
 
 
-    '---------------------------LANCEMENT DES FONCTIONS DE RECUP2RATION DES DONNEES LORS DE LA MODIF DU COLLABO CHOISI (COMBOBOX)-----------------------
+    '---------------------------           RECUPERATION DES DONNEES LORS DE LA MODIF DU COLLABO CHOISI (COMBOBOX)          ---------------------------
 
 
     Private Sub CB_Collabo_SelectedIndexChanged1(sender As Object, e As EventArgs) Handles CB_Collabo.SelectedIndexChanged
@@ -163,6 +167,61 @@
 
 
 
+    Private Sub BTN_Valider_Click(sender As Object, e As EventArgs) Handles BTN_Valider.Click
+
+
+
+        '----------------------------------------      BOUTON VALIDER -> LANCEMENT DES FONCTIONS UPDATE             ------------------------------------------------
+
+
+
+        If RB_Modif.Checked Then '---------
+
+            If CB_Collabo.Text = "" Then
+                MessageBox.Show("Vous devez choisir un collaborateur pour pouvoir le modifier!")
+            Else
+                Dim result As Integer = MessageBox.Show("Souhaitez-vous Vraiment modifier les informations concernant : " _
+                    + Chr(10) + TB_Nom.Text + " " + TB_Prenom.Text, "ATTENTION", MessageBoxButtons.YesNo)
+
+                If result = DialogResult.Yes Then
+                    Try
+                        Update_Adresse(Me.CB_Collabo, Me.TB_CP, Me.TB_CptAdresse, Me.TB_NumRue, Me.TB_Ville)
+                        Update_Collabo(Me.CB_Collabo, Me.TB_Nom, Me.TB_Prenom, Me.TB_Tel)
+                        MsgBox("Modification Effectuée!")
+                    Catch ex As Exception
+                        MsgBox("Echec de la Modification du collaborateur!" + Chr(10) + "Merci de vérifier la cohérence des informations saisies")
+                    End Try
+                End If
+            End If
+
+            '-----------------------------------      BOUTON VALIDER -> LANCEMENT DES FONCTIONS INSERT             ------------------------------------------------
+
+        ElseIf RB_Ajout.Checked Then
+
+            If (TB_CP.Text = "" Or TB_Nom.Text = "" Or TB_NumRue.Text = "" Or TB_Prenom.Text = "" Or TB_Tel.Text = "" Or TB_Ville.Text = "") Then
+                MsgBox("Certaines informations obligatoires sont manquante" + Chr(10) + "Merci de verifier les *")
+
+            Else
+                Try
+                    MsgBox("On va enregistrer!" + Chr(10) + "Tous les champs obligatoires sont remplis!" + Chr(10) + Chr(10) + "FELICITATION!!!!!!!!!!!!!!!!!!!")
+                    '--------->      ICI LANCEMENT DES FONCTIONS INSERT INTO        <----------------
+                    MsgBox("Création Effectuée!")
+                Catch ex As Exception
+                    MsgBox("Echec de la création du collaborateur!" + Chr(10) + "Merci de vérifier la cohérence des informations saisies")
+                End Try
+
+            End If
+
+        Else MsgBox("Vous devez choisir une action (modifier, creer, ou consulter)")
+        End If
+    End Sub
+
+
+
+
+
+
+
     '---------------------------------------FONCTION RETOUR ET FERMETURE DE L'APPLI-------------------------------
 
     Private Sub BTN_Back_Click(sender As Object, e As EventArgs) Handles BTN_Back.Click
@@ -173,35 +232,5 @@
 
     Private Sub Quitter_Click(sender As Object, e As EventArgs) Handles Quitter.Click
         Me.Close()
-    End Sub
-
-    Private Sub BTN_Valider_Click(sender As Object, e As EventArgs) Handles BTN_Valider.Click
-
-        If RB_Modif.Checked Then
-
-            If CB_Collabo.Text = "" Then
-                MessageBox.Show("Vous devez choisir un collaborateur pour pouvoir le modifier!")
-            Else
-                Dim result As Integer = MessageBox.Show("Souhaitez-vous Vraiment modifier les informations concernant : " + Chr(10) + TB_Nom.Text + " " + TB_Prenom.Text, "ATTENTION", MessageBoxButtons.YesNo)
-
-
-                If result = DialogResult.No Then
-                    MessageBox.Show("NNNOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
-
-                ElseIf result = DialogResult.Yes Then
-                    MessageBox.Show("OOOOOOOHHHH YYYYYYYYEEEEEEEEEESSSSSSSSS") '------------------->   ICI FONCTION UPDATE COLLABORATEUR
-                End If
-            End If
-
-        ElseIf RB_Ajout.Checked Then
-
-            If (TB_CP.Text = "" Or TB_Nom.Text = "" Or TB_NumRue.Text = "" Or TB_Prenom.Text = "" Or TB_Tel.Text = "" Or TB_Ville.Text = "") Then
-                MsgBox("Certaines informations obligatoires sont manquante" + Chr(10) + "Merci de verifier les *")
-
-            Else MsgBox("On va enregistrer!" + Chr(10) + "Tous les champs obligatoires sont remplis!" + Chr(10) + Chr(10) + "FELICITATION!!!!!!!!!!!!!!!!!!!") '--------------->    ICI FONCTION INSERT INTO
-            End If
-
-        Else MsgBox("Vous devez choisir une action (modifier, creer, ou consulter)")
-        End If
     End Sub
 End Class
