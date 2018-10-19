@@ -7,7 +7,6 @@ Module Fonction_Recuperation_Donnees
     '|--------------------------------------------------------------------REMPLISSAGE CBBOX COLLABORATEURS ------------------------------------------------------------|
     '|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-
     Public Function Remplissage_CB_Collabo(nomForm As ComboBox)
 
         Dim maConnexion As New SqlConnection(str_chaine_de_connexion)
@@ -36,6 +35,11 @@ Module Fonction_Recuperation_Donnees
         End Try
 
     End Function
+
+
+
+
+
     '|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
     '|-------------------------------------------RECUPERATION ET AFFECTATION DU NOM ET PRENOM COLLABORATEUR  ----------------------------------------------------------|
     '|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -51,13 +55,15 @@ Module Fonction_Recuperation_Donnees
 
     End Function
 
+
+
+
+
     '|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
     '|-------------------------------------------RECUPERATION ET AFFECTATION DU TELEPHONE COLLABORATEUR (POLYMORPHE) --------------------------------------------------|
     '|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-
     '--------------------------------------------ARGUMENT (LB, CB)------------------------------------------
-
     Public Function Recup_Tel(LB_Phone As Label, CB_Collabo As ComboBox)
 
         Dim monCollabo As String = CB_Collabo.SelectedItem
@@ -83,8 +89,7 @@ Module Fonction_Recuperation_Donnees
 
     End Function
 
-    '--------------------------------------------ARGUMENT (TB, CB)----------------------------------------------
-
+    '--------------------------------------------ARGUMENT (TB, CB)------------------------------------------
     Public Function Recup_Tel(TB_Tel As TextBox, CB_Collabo As ComboBox)
 
         Dim monCollabo As String = CB_Collabo.SelectedItem
@@ -110,14 +115,15 @@ Module Fonction_Recuperation_Donnees
 
     End Function
 
+
+
+
+
     '|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
     '|-------------------------------------------RECUPERATION ET AFFECTATION DE DATE EMBAUCHE COLLABORATEUR (POLYMORPHE) ----------------------------------------------|
     '|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-
-    '-----------------------------------------------ARGUMENT (LB, CB)-----------------------------------------------------------------
-
-
+    '-----------------------------------------------ARGUMENT (LB, CB)------------------------------------------
     Public Function Recup_Date_Embau(LB_Embauche As Label, CB_Collabo As ComboBox)
 
         Dim monCollabo As String = CB_Collabo.SelectedItem
@@ -143,10 +149,7 @@ Module Fonction_Recuperation_Donnees
 
     End Function
 
-
-    '-----------------------------------------------------ARGUMENT (TB, CB)-----------------------------------------------------------------
-
-
+    '-----------------------------------------------------ARGUMENT (TB, CB)------------------------------------
     Public Function Recup_Date_Embau(TB_embauche As TextBox, CB_Collabo As ComboBox)
 
         Dim monCollabo As String = CB_Collabo.SelectedItem
@@ -172,14 +175,15 @@ Module Fonction_Recuperation_Donnees
 
     End Function
 
+
+
+
+
     '-----------------------------------------------------------------------------------------------------------------------------------------------------------------
     '-------------------------------------------RECUPERATION ET AFFECTATION DE NUM ET RUE DE L'ADRESSE (POLYMORPHE) --------------------------------------------------
     '-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-    '------------------------------------------------ARGUMENT (LB, CB)----------------------------------------------------------------------------------------
-
-
+    '------------------------------------------------ARGUMENT (LB, CB)-------------------------------------------
     Public Function Recup_Rue(LB_Rue As Label, CB_Collabo As ComboBox)
 
         Dim monCollabo As String = CB_Collabo.SelectedItem
@@ -203,10 +207,7 @@ Module Fonction_Recuperation_Donnees
 
     End Function
 
-
-    '-------------------------------------------------------------ARGUMENT (TB, CB)------------------------------------------------------------
-
-
+    '-------------------------------------------------------------ARGUMENT (TB, CB)------------------------------
     Public Function Recup_Rue(TB_NumRue As TextBox, CB_Collabo As ComboBox)
 
         Dim monCollabo As String = CB_Collabo.SelectedItem
@@ -232,13 +233,13 @@ Module Fonction_Recuperation_Donnees
 
 
 
+
+
     '-----------------------------------------------------------------------------------------------------------------------------------------------------------------
     '---------------------------RECUPERATION ET AFFECTATION DU COMPLEMENT + CODE POSTAL + VILLE DE L'ADRESSE (POLYMORPHE) -------------------------------------------
     '-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-    '------------------------------------------------------ARGUMENT (LB, LB, CB)---------------------------------------------------
-
+    '------------------------------------------------------ARGUMENT (LB, LB, CB)---------------------------------
     Public Function Recup_Ville_CP(LB_Ville As Label, LB_complement As Label, CB_Collabo As ComboBox)
 
         Dim monCollabo As String = CB_Collabo.SelectedItem
@@ -300,12 +301,7 @@ Module Fonction_Recuperation_Donnees
         maConnexion.Close()
     End Function
 
-
-
     '---------------------------------------------------ARGUMENT (TB, TB, CB)--------------------------------------
-
-
-
     Public Function Recup_Ville_CP(TB_Ville As TextBox, TB_CptAdresse As TextBox, TB_CP As TextBox, CB_Collabo As ComboBox)
 
         Dim monCollabo As String = CB_Collabo.SelectedItem
@@ -370,6 +366,9 @@ Module Fonction_Recuperation_Donnees
     End Function
 
 
+
+
+
     '|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
     '|------------------------------------------------FONCTION RECUPERATION ET AFFECTATION ETAT CIVIL COLLABORATEUR----------------------------------------------------|
     '|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -402,4 +401,8 @@ Module Fonction_Recuperation_Donnees
         maConnexion.Close()
 
     End Function
+
+
+
+
 End Module

@@ -49,7 +49,7 @@ Module Fonction_Update_Insert
     Public Function Update_Collabo(CB_Collabo As ComboBox, TB_Nom As TextBox, TB_Prenom As TextBox, TB_Tel As TextBox)
 
 
-        Dim monCollabo As String = CB_Collabo.SelectedItem
+        Dim monCollabo As String = CB_Collabo.SelectedItem.ToString
 
         Dim chaineNom() As String = Split(monCollabo)
 
@@ -81,7 +81,7 @@ Module Fonction_Update_Insert
 
     Public Function Check_Double_Adresse(CB_Collabo As ComboBox)
 
-        Dim monCollabo As String = CB_Collabo.SelectedItem
+        Dim monCollabo As String = CB_Collabo.SelectedItem.ToString
         Dim chaineNom() As String = Split(monCollabo)
 
 
