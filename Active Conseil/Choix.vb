@@ -27,7 +27,7 @@
 
     Private Sub BTN_Back_Click(sender As Object, e As EventArgs) Handles BTN_Back.Click
         Page_Accueil.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub BTN_Admin_Click(sender As Object, e As EventArgs) Handles BTN_Admin.Click
