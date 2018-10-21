@@ -28,6 +28,9 @@ Partial Class Admin
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabCollab = New System.Windows.Forms.TabPage()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -66,7 +69,6 @@ Partial Class Admin
         Me.RB_Modif = New System.Windows.Forms.RadioButton()
         Me.TabClient = New System.Windows.Forms.TabPage()
         Me.TabProjet = New System.Windows.Forms.TabPage()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabCollab.SuspendLayout()
         Me.GB_Civilite.SuspendLayout()
@@ -99,6 +101,8 @@ Partial Class Admin
         'TabCollab
         '
         Me.TabCollab.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.TabCollab.Controls.Add(Me.Label10)
+        Me.TabCollab.Controls.Add(Me.Label9)
         Me.TabCollab.Controls.Add(Me.Label8)
         Me.TabCollab.Controls.Add(Me.Label7)
         Me.TabCollab.Controls.Add(Me.Label6)
@@ -138,6 +142,36 @@ Partial Class Admin
         Me.TabCollab.Size = New System.Drawing.Size(1025, 528)
         Me.TabCollab.TabIndex = 0
         Me.TabCollab.Text = "COLLABORATEUR"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(376, 372)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(67, 12)
+        Me.Label10.TabIndex = 41
+        Me.Label10.Text = "JJ/MM/AAAA"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(376, 344)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(67, 12)
+        Me.Label9.TabIndex = 40
+        Me.Label9.Text = "JJ/MM/AAAA"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.ForeColor = System.Drawing.Color.DarkRed
+        Me.Label8.Location = New System.Drawing.Point(454, 494)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(108, 13)
+        Me.Label8.TabIndex = 39
+        Me.Label8.Text = "* Champs obligatoires"
         '
         'Label7
         '
@@ -208,10 +242,10 @@ Partial Class Admin
         '
         'TB_Fin
         '
-        Me.TB_Fin.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TB_Fin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TB_Fin.Location = New System.Drawing.Point(170, 366)
         Me.TB_Fin.Name = "TB_Fin"
-        Me.TB_Fin.Size = New System.Drawing.Size(200, 22)
+        Me.TB_Fin.Size = New System.Drawing.Size(200, 20)
         Me.TB_Fin.TabIndex = 32
         '
         'TB_Embauche
@@ -521,16 +555,6 @@ Partial Class Admin
         Me.TabProjet.TabIndex = 2
         Me.TabProjet.Text = "PROJET"
         '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.ForeColor = System.Drawing.Color.DarkRed
-        Me.Label8.Location = New System.Drawing.Point(454, 494)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(108, 13)
-        Me.Label8.TabIndex = 39
-        Me.Label8.Text = "* Champs obligatoires"
-        '
         'Admin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -595,4 +619,6 @@ Partial Class Admin
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label8 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label9 As Label
 End Class

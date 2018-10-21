@@ -166,7 +166,7 @@ Module Fonction_Recuperation_Donnees
         maConnexion.Open()
         Dim Requete2 As String
         If Mycommand2.ExecuteScalar Is DBNull.Value Then
-            Requete2 = "00/00/0000"
+            Requete2 = "Non Renseigné"
         Else Requete2 = Mycommand2.ExecuteScalar
         End If
         Dim dateE As String = Requete2.ToString
@@ -175,6 +175,66 @@ Module Fonction_Recuperation_Donnees
 
     End Function
 
+
+
+
+
+    '|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+    '|-----------------------------          FONCTION AFFECTATION DATE DE FIN CONTRAT AU COLLABORATEUR   (POLYMORPHE)      --------------------------------|
+    '|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+
+    '-----------------------------------------------------ARGUMENT (TB, CB)------------------------------------
+    Public Function Recup_Date_Fin(TB_fin As TextBox, CB_Collabo As ComboBox)
+
+        Dim monCollabo As String = CB_Collabo.SelectedItem
+        Dim chaineNom() As String = Split(monCollabo)
+        Dim maConnexion As New SqlConnection(str_chaine_de_connexion)
+        Dim Mycommand2 As SqlCommand = maConnexion.CreateCommand()
+        Mycommand2.CommandText = "select 
+                                      DATE_FIN_CONTRAT as date 
+                                  from 
+                                      COLLABORATEUR
+                                  where 
+                                       NOM_COLLABORATEUR = '" & chaineNom(0) & "' 
+                                       and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
+        maConnexion.Open()
+        Dim Requete2 As String
+        If Mycommand2.ExecuteScalar Is DBNull.Value Then
+            Requete2 = "Non Renseigné"
+        Else Requete2 = Mycommand2.ExecuteScalar
+        End If
+        Dim dateF As String = Requete2.ToString
+        TB_fin.Text = dateF
+        maConnexion.Close()
+
+    End Function
+
+
+    '-----------------------------------------------------ARGUMENT (LB, CB)------------------------------------
+    Public Function Recup_Date_Fin(LB_Fin As Label, CB_Collabo As ComboBox)
+
+        Dim monCollabo As String = CB_Collabo.SelectedItem
+        Dim chaineNom() As String = Split(monCollabo)
+        Dim maConnexion As New SqlConnection(str_chaine_de_connexion)
+        Dim Mycommand2 As SqlCommand = maConnexion.CreateCommand()
+        Mycommand2.CommandText = "select 
+                                      DATE_FIN_CONTRAT as date 
+                                  from 
+                                      COLLABORATEUR
+                                  where 
+                                       NOM_COLLABORATEUR = '" & chaineNom(0) & "' 
+                                       and PRENOM_COLLABORATEUR = '" & chaineNom(1) & "'"
+        maConnexion.Open()
+        Dim Requete2 As String
+        If Mycommand2.ExecuteScalar Is DBNull.Value Then
+            Requete2 = "Non Renseigné"
+        Else Requete2 = Mycommand2.ExecuteScalar
+        End If
+        Dim dateF As String = Requete2.ToString
+        LB_Fin.Text = dateF
+        maConnexion.Close()
+
+    End Function
 
 
 
@@ -207,7 +267,7 @@ Module Fonction_Recuperation_Donnees
 
     End Function
 
-    '-------------------------------------------------------------ARGUMENT (TB, CB)------------------------------
+    '------------------------------------------------ARGUMENT (TB, CB)-------------------------------------------
     Public Function Recup_Rue(TB_NumRue As TextBox, CB_Collabo As ComboBox)
 
         Dim monCollabo As String = CB_Collabo.SelectedItem
@@ -373,7 +433,6 @@ Module Fonction_Recuperation_Donnees
     '|------------------------------------------------FONCTION RECUPERATION ET AFFECTATION ETAT CIVIL COLLABORATEUR----------------------------------------------------|
     '|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-
     Public Function Recup_Civilite(RB_Mr As RadioButton, RB_Mme As RadioButton, RB_Mlle As RadioButton, CB_Collabo As ComboBox)
 
 
@@ -396,7 +455,7 @@ Module Fonction_Recuperation_Donnees
             RB_Mme.Checked = True
         ElseIf civilite = "MLE" Then
             RB_Mlle.Checked = True
-        Else MsgBox("Etat civil inconnu?????????")
+        Else MsgBox("Etat civil inconnu!")
         End If
         maConnexion.Close()
 

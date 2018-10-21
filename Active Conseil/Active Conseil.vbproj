@@ -120,6 +120,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Fonction_Update_Insert.vb" />
+    <Compile Include="Projet.Designer.vb">
+      <DependentUpon>Projet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Projet.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="variables.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -140,6 +146,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Projet.resx">
+      <DependentUpon>Projet.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

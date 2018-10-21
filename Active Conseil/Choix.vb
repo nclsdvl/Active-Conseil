@@ -17,7 +17,11 @@
     End Sub
 
     Private Sub Quitter_Click(sender As Object, e As EventArgs) Handles Quitter.Click
-        Me.Close()
+        Dim confirmation As DialogResult = MessageBox.Show("Souhaitez-vous quitter l'application ?", "Quitter", MessageBoxButtons.YesNo)
+        If confirmation = DialogResult.Yes Then
+            Me.Close()
+        End If
+
     End Sub
 
     Private Sub BTN_Collabo_Click(sender As Object, e As EventArgs) Handles BTN_Collabo.Click
@@ -32,6 +36,11 @@
 
     Private Sub BTN_Admin_Click(sender As Object, e As EventArgs) Handles BTN_Admin.Click
         Admin.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub BTN_Projet_Click(sender As Object, e As EventArgs) Handles BTN_Projet.Click
+        Projet.Show()
         Me.Hide()
     End Sub
 End Class

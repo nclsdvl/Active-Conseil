@@ -4,17 +4,23 @@ Imports System.Data.SqlClient
 Public Class Collaborateur
 
 
+    Private Sub Collaborateur_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        For x As Double = 1 To 0 Step -0.1
+            Me.Opacity = x
+            System.Threading.Thread.Sleep(50)
+            Application.DoEvents()
+        Next
+    End Sub
 
     Private Sub Client_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-
         Remplissage_CB_Collabo(Me.CB_Collabo)
 
-
-
     End Sub
+
+
     '|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    '|----------------------------------------------------RECUPERATION : TEL + DATE EMBAUCHE + RUE + CP VILLE----------------------------------------------------------|
+    '|----------------------------------------------------RECUPERATION : TEL + DATE EMBAUCHE + DATE FIN + RUE + CP VILLE----------------------------------------------------------|
     '|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
     Private Sub CB_Collabo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CB_Collabo.SelectedIndexChanged
@@ -23,11 +29,11 @@ Public Class Collaborateur
         Dim maConnexion As New SqlConnection(str_chaine_de_connexion)
 
         Dim monCollabo As String = CB_Collabo.SelectedItem
-
         Dim monNom() As String = Split(monCollabo)
 
         Recup_Tel(Me.LB_Phone, Me.CB_Collabo)
         Recup_Date_Embau(Me.LB_Embauche, Me.CB_Collabo)
+        Recup_Date_Fin(Me.LB_Fin, Me.CB_Collabo)
         Recup_Rue(Me.LB_Rue, Me.CB_Collabo)
         Recup_Ville_CP(Me.LB_Ville, Me.LB_complement, Me.CB_Collabo)
 
@@ -111,7 +117,11 @@ Public Class Collaborateur
     '|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
     Private Sub Quitter_Click(sender As Object, e As EventArgs) Handles Quitter.Click
-        Me.Close()
+        Dim confirmation As DialogResult = MessageBox.Show("Souhaitez-vous quitter l'application ?", "Quitter", MessageBoxButtons.YesNo)
+        If confirmation = DialogResult.Yes Then
+            Me.Close()
+        End If
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

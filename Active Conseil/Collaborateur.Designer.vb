@@ -53,6 +53,8 @@ Partial Class Collaborateur
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.LB_Date_Fin = New System.Windows.Forms.Label()
+        Me.LB_Fin = New System.Windows.Forms.Label()
         CType(Me.COLLABORATEURBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ActiveFinalCommunDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Active_Final_CommunDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -74,7 +76,7 @@ Partial Class Collaborateur
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(23, 152)
+        Me.Label3.Location = New System.Drawing.Point(104, 153)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(103, 20)
         Me.Label3.TabIndex = 4
@@ -84,7 +86,7 @@ Partial Class Collaborateur
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(12, 207)
+        Me.Label4.Location = New System.Drawing.Point(47, 187)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(160, 20)
         Me.Label4.TabIndex = 6
@@ -164,7 +166,7 @@ Partial Class Collaborateur
         '
         Me.LB_Phone.AutoSize = True
         Me.LB_Phone.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LB_Phone.Location = New System.Drawing.Point(184, 152)
+        Me.LB_Phone.Location = New System.Drawing.Point(213, 153)
         Me.LB_Phone.Name = "LB_Phone"
         Me.LB_Phone.Size = New System.Drawing.Size(0, 20)
         Me.LB_Phone.TabIndex = 10
@@ -173,7 +175,7 @@ Partial Class Collaborateur
         '
         Me.LB_Embauche.AutoSize = True
         Me.LB_Embauche.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LB_Embauche.Location = New System.Drawing.Point(184, 208)
+        Me.LB_Embauche.Location = New System.Drawing.Point(213, 187)
         Me.LB_Embauche.Name = "LB_Embauche"
         Me.LB_Embauche.Size = New System.Drawing.Size(0, 20)
         Me.LB_Embauche.TabIndex = 11
@@ -287,12 +289,33 @@ Partial Class Collaborateur
         Me.Button1.TabIndex = 22
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'LB_Date_Fin
+        '
+        Me.LB_Date_Fin.AutoSize = True
+        Me.LB_Date_Fin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LB_Date_Fin.Location = New System.Drawing.Point(12, 222)
+        Me.LB_Date_Fin.Name = "LB_Date_Fin"
+        Me.LB_Date_Fin.Size = New System.Drawing.Size(195, 20)
+        Me.LB_Date_Fin.TabIndex = 23
+        Me.LB_Date_Fin.Text = "Date de fin de contrat :"
+        '
+        'LB_Fin
+        '
+        Me.LB_Fin.AutoSize = True
+        Me.LB_Fin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LB_Fin.Location = New System.Drawing.Point(213, 222)
+        Me.LB_Fin.Name = "LB_Fin"
+        Me.LB_Fin.Size = New System.Drawing.Size(0, 20)
+        Me.LB_Fin.TabIndex = 24
+        '
         'Collaborateur
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(866, 536)
+        Me.Controls.Add(Me.LB_Fin)
+        Me.Controls.Add(Me.LB_Date_Fin)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -355,4 +378,6 @@ Partial Class Collaborateur
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents LB_Date_Fin As Label
+    Friend WithEvents LB_Fin As Label
 End Class

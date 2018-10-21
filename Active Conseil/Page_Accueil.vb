@@ -4,6 +4,25 @@ Imports System.Text
 
 Public Class Page_Accueil
 
+    Private Sub Page_Accueil_shown(sender As Object, e As EventArgs) Handles MyBase.Load
+        For x As Double = 0 To 1 Step 0.1
+            Me.Opacity = x
+            System.Threading.Thread.Sleep(50)
+            Application.DoEvents()
+        Next
+    End Sub
+
+    Private Sub Page_Accueil_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        For x As Double = 1 To 0 Step -0.1
+            Me.Opacity = x
+            System.Threading.Thread.Sleep(50)
+            Application.DoEvents()
+        Next
+    End Sub
+
+
+
+
     Private Sub BTN_Valider_Click(sender As Object, e As EventArgs) Handles BTN_Valider.Click
 
         Dim i_choix As Integer
@@ -69,7 +88,4 @@ Public Class Page_Accueil
         Me.Close()
     End Sub
 
-    Private Sub Page_Accueil_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class
