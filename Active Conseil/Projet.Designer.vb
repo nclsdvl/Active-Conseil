@@ -51,9 +51,25 @@ Partial Class Projet
         Me.LB_Doc = New System.Windows.Forms.ListBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.LB_Resume = New System.Windows.Forms.Label()
+        Me.LB15 = New System.Windows.Forms.Label()
         Me.BTN_Back = New System.Windows.Forms.Button()
         Me.Quitter = New System.Windows.Forms.Button()
+        Me.LB_Auteur = New System.Windows.Forms.Label()
+        Me.LB_Resume = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.LB_Date = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Nom_Etape = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'LB_Projet
@@ -94,17 +110,17 @@ Partial Class Projet
         Me.LB_Techno.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LB_Techno.FormattingEnabled = True
         Me.LB_Techno.ItemHeight = 16
-        Me.LB_Techno.Location = New System.Drawing.Point(62, 372)
+        Me.LB_Techno.Location = New System.Drawing.Point(849, 139)
         Me.LB_Techno.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.LB_Techno.Name = "LB_Techno"
-        Me.LB_Techno.Size = New System.Drawing.Size(224, 164)
+        Me.LB_Techno.Size = New System.Drawing.Size(183, 164)
         Me.LB_Techno.TabIndex = 3
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(504, 141)
+        Me.Label2.Location = New System.Drawing.Point(467, 139)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(59, 16)
@@ -115,7 +131,7 @@ Partial Class Projet
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(445, 172)
+        Me.Label3.Location = New System.Drawing.Point(408, 157)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(118, 16)
@@ -126,7 +142,7 @@ Partial Class Projet
         '
         Me.LB_Chef.AutoSize = True
         Me.LB_Chef.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LB_Chef.Location = New System.Drawing.Point(563, 172)
+        Me.LB_Chef.Location = New System.Drawing.Point(528, 157)
         Me.LB_Chef.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LB_Chef.Name = "LB_Chef"
         Me.LB_Chef.Size = New System.Drawing.Size(0, 16)
@@ -136,7 +152,7 @@ Partial Class Projet
         '
         Me.LB_Client.AutoSize = True
         Me.LB_Client.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LB_Client.Location = New System.Drawing.Point(563, 141)
+        Me.LB_Client.Location = New System.Drawing.Point(528, 139)
         Me.LB_Client.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LB_Client.Name = "LB_Client"
         Me.LB_Client.Size = New System.Drawing.Size(0, 16)
@@ -146,7 +162,7 @@ Partial Class Projet
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(504, 200)
+        Me.Label4.Location = New System.Drawing.Point(467, 265)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(55, 16)
@@ -156,7 +172,7 @@ Partial Class Projet
         'LB_Cycle
         '
         Me.LB_Cycle.AutoSize = True
-        Me.LB_Cycle.Location = New System.Drawing.Point(563, 200)
+        Me.LB_Cycle.Location = New System.Drawing.Point(528, 265)
         Me.LB_Cycle.Name = "LB_Cycle"
         Me.LB_Cycle.Size = New System.Drawing.Size(0, 16)
         Me.LB_Cycle.TabIndex = 10
@@ -165,7 +181,7 @@ Partial Class Projet
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(443, 231)
+        Me.Label5.Location = New System.Drawing.Point(408, 193)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(114, 16)
         Me.Label5.TabIndex = 11
@@ -175,7 +191,7 @@ Partial Class Projet
         '
         Me.LB_Deb.AutoSize = True
         Me.LB_Deb.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!)
-        Me.LB_Deb.Location = New System.Drawing.Point(643, 234)
+        Me.LB_Deb.Location = New System.Drawing.Point(613, 194)
         Me.LB_Deb.Name = "LB_Deb"
         Me.LB_Deb.Size = New System.Drawing.Size(0, 13)
         Me.LB_Deb.TabIndex = 12
@@ -184,7 +200,7 @@ Partial Class Projet
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(461, 266)
+        Me.Label6.Location = New System.Drawing.Point(426, 211)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(96, 16)
         Me.Label6.TabIndex = 13
@@ -194,7 +210,7 @@ Partial Class Projet
         '
         Me.LB_Fin.AutoSize = True
         Me.LB_Fin.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!)
-        Me.LB_Fin.Location = New System.Drawing.Point(643, 269)
+        Me.LB_Fin.Location = New System.Drawing.Point(613, 212)
         Me.LB_Fin.Name = "LB_Fin"
         Me.LB_Fin.Size = New System.Drawing.Size(0, 13)
         Me.LB_Fin.TabIndex = 14
@@ -202,7 +218,7 @@ Partial Class Projet
         'LB_Deb_Reel
         '
         Me.LB_Deb_Reel.AutoSize = True
-        Me.LB_Deb_Reel.Location = New System.Drawing.Point(563, 231)
+        Me.LB_Deb_Reel.Location = New System.Drawing.Point(528, 193)
         Me.LB_Deb_Reel.Name = "LB_Deb_Reel"
         Me.LB_Deb_Reel.Size = New System.Drawing.Size(0, 16)
         Me.LB_Deb_Reel.TabIndex = 15
@@ -210,7 +226,7 @@ Partial Class Projet
         'LB_Fin_Reel
         '
         Me.LB_Fin_Reel.AutoSize = True
-        Me.LB_Fin_Reel.Location = New System.Drawing.Point(563, 266)
+        Me.LB_Fin_Reel.Location = New System.Drawing.Point(528, 211)
         Me.LB_Fin_Reel.Name = "LB_Fin_Reel"
         Me.LB_Fin_Reel.Size = New System.Drawing.Size(0, 16)
         Me.LB_Fin_Reel.TabIndex = 16
@@ -219,7 +235,7 @@ Partial Class Projet
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(86, 337)
+        Me.Label7.Location = New System.Drawing.Point(851, 107)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(181, 18)
         Me.Label7.TabIndex = 17
@@ -229,7 +245,7 @@ Partial Class Projet
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(804, 200)
+        Me.Label8.Location = New System.Drawing.Point(352, 175)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(170, 16)
         Me.Label8.TabIndex = 18
@@ -239,7 +255,7 @@ Partial Class Projet
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(833, 232)
+        Me.Label9.Location = New System.Drawing.Point(383, 247)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(143, 16)
         Me.Label9.TabIndex = 19
@@ -250,7 +266,7 @@ Partial Class Projet
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(905, 172)
+        Me.Label10.Location = New System.Drawing.Point(453, 229)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(69, 16)
         Me.Label10.TabIndex = 20
@@ -259,7 +275,7 @@ Partial Class Projet
         'LB_Secteur
         '
         Me.LB_Secteur.AutoSize = True
-        Me.LB_Secteur.Location = New System.Drawing.Point(1004, 172)
+        Me.LB_Secteur.Location = New System.Drawing.Point(528, 229)
         Me.LB_Secteur.Name = "LB_Secteur"
         Me.LB_Secteur.Size = New System.Drawing.Size(0, 16)
         Me.LB_Secteur.TabIndex = 21
@@ -267,7 +283,7 @@ Partial Class Projet
         'LB_Equipe
         '
         Me.LB_Equipe.AutoSize = True
-        Me.LB_Equipe.Location = New System.Drawing.Point(1004, 203)
+        Me.LB_Equipe.Location = New System.Drawing.Point(528, 175)
         Me.LB_Equipe.Name = "LB_Equipe"
         Me.LB_Equipe.Size = New System.Drawing.Size(0, 16)
         Me.LB_Equipe.TabIndex = 22
@@ -275,7 +291,7 @@ Partial Class Projet
         'LB_Nbr_Ligne
         '
         Me.LB_Nbr_Ligne.AutoSize = True
-        Me.LB_Nbr_Ligne.Location = New System.Drawing.Point(1004, 234)
+        Me.LB_Nbr_Ligne.Location = New System.Drawing.Point(528, 247)
         Me.LB_Nbr_Ligne.Name = "LB_Nbr_Ligne"
         Me.LB_Nbr_Ligne.Size = New System.Drawing.Size(0, 16)
         Me.LB_Nbr_Ligne.TabIndex = 23
@@ -285,16 +301,16 @@ Partial Class Projet
         '
         Me.LB_Collab.FormattingEnabled = True
         Me.LB_Collab.ItemHeight = 16
-        Me.LB_Collab.Location = New System.Drawing.Point(441, 372)
+        Me.LB_Collab.Location = New System.Drawing.Point(27, 364)
         Me.LB_Collab.Name = "LB_Collab"
-        Me.LB_Collab.Size = New System.Drawing.Size(179, 164)
+        Me.LB_Collab.Size = New System.Drawing.Size(315, 164)
         Me.LB_Collab.TabIndex = 24
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(469, 337)
+        Me.Label11.Location = New System.Drawing.Point(117, 329)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(125, 18)
         Me.Label11.TabIndex = 25
@@ -304,16 +320,16 @@ Partial Class Projet
         '
         Me.LB_Doc.FormattingEnabled = True
         Me.LB_Doc.ItemHeight = 16
-        Me.LB_Doc.Location = New System.Drawing.Point(778, 372)
+        Me.LB_Doc.Location = New System.Drawing.Point(808, 366)
         Me.LB_Doc.Name = "LB_Doc"
-        Me.LB_Doc.Size = New System.Drawing.Size(236, 164)
+        Me.LB_Doc.Size = New System.Drawing.Size(276, 164)
         Me.LB_Doc.TabIndex = 26
         '
         'Label12
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(833, 337)
+        Me.Label12.Location = New System.Drawing.Point(881, 329)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(130, 18)
         Me.Label12.TabIndex = 27
@@ -322,27 +338,29 @@ Partial Class Projet
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(1031, 402)
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(1117, 400)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(132, 16)
+        Me.Label13.Size = New System.Drawing.Size(60, 16)
         Me.Label13.TabIndex = 28
-        Me.Label13.Text = "Auteur : (pb BDD!!!!!!!)"
+        Me.Label13.Text = "Auteur :"
         '
-        'LB_Resume
+        'LB15
         '
-        Me.LB_Resume.AutoSize = True
-        Me.LB_Resume.Location = New System.Drawing.Point(1031, 458)
-        Me.LB_Resume.Name = "LB_Resume"
-        Me.LB_Resume.Size = New System.Drawing.Size(68, 16)
-        Me.LB_Resume.TabIndex = 29
-        Me.LB_Resume.Text = "Resumé : "
+        Me.LB15.AutoSize = True
+        Me.LB15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LB15.Location = New System.Drawing.Point(1104, 456)
+        Me.LB15.Name = "LB15"
+        Me.LB15.Size = New System.Drawing.Size(73, 16)
+        Me.LB15.TabIndex = 29
+        Me.LB15.Text = "Resumé :"
         '
         'BTN_Back
         '
         Me.BTN_Back.BackgroundImage = CType(resources.GetObject("BTN_Back.BackgroundImage"), System.Drawing.Image)
         Me.BTN_Back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BTN_Back.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.BTN_Back.Location = New System.Drawing.Point(1267, 12)
+        Me.BTN_Back.Location = New System.Drawing.Point(1316, 12)
         Me.BTN_Back.Name = "BTN_Back"
         Me.BTN_Back.Size = New System.Drawing.Size(43, 43)
         Me.BTN_Back.TabIndex = 30
@@ -353,20 +371,182 @@ Partial Class Projet
         Me.Quitter.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Quitter.Image = CType(resources.GetObject("Quitter.Image"), System.Drawing.Image)
         Me.Quitter.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Quitter.Location = New System.Drawing.Point(1267, 552)
+        Me.Quitter.Location = New System.Drawing.Point(1316, 510)
         Me.Quitter.Name = "Quitter"
         Me.Quitter.Size = New System.Drawing.Size(43, 43)
         Me.Quitter.TabIndex = 31
         Me.Quitter.UseVisualStyleBackColor = False
         '
+        'LB_Auteur
+        '
+        Me.LB_Auteur.AutoSize = True
+        Me.LB_Auteur.Location = New System.Drawing.Point(1184, 400)
+        Me.LB_Auteur.Name = "LB_Auteur"
+        Me.LB_Auteur.Size = New System.Drawing.Size(0, 16)
+        Me.LB_Auteur.TabIndex = 32
+        '
+        'LB_Resume
+        '
+        Me.LB_Resume.AutoSize = True
+        Me.LB_Resume.Location = New System.Drawing.Point(1184, 456)
+        Me.LB_Resume.Name = "LB_Resume"
+        Me.LB_Resume.Size = New System.Drawing.Size(0, 16)
+        Me.LB_Resume.TabIndex = 33
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(1128, 428)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(49, 16)
+        Me.Label14.TabIndex = 34
+        Me.Label14.Text = "Date :"
+        '
+        'LB_Date
+        '
+        Me.LB_Date.AutoSize = True
+        Me.LB_Date.Location = New System.Drawing.Point(1184, 428)
+        Me.LB_Date.Name = "LB_Date"
+        Me.LB_Date.Size = New System.Drawing.Size(0, 16)
+        Me.LB_Date.TabIndex = 35
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(593, 426)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(0, 16)
+        Me.Label15.TabIndex = 41
+        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(593, 398)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(0, 16)
+        Me.Label16.TabIndex = 40
+        '
+        'Nom_Etape
+        '
+        Me.Nom_Etape.AutoSize = True
+        Me.Nom_Etape.Location = New System.Drawing.Point(593, 370)
+        Me.Nom_Etape.Name = "Nom_Etape"
+        Me.Nom_Etape.Size = New System.Drawing.Size(0, 16)
+        Me.Nom_Etape.TabIndex = 39
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(435, 370)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(122, 16)
+        Me.Label18.TabIndex = 38
+        Me.Label18.Text = "Nom de l'étape :"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(346, 426)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(211, 16)
+        Me.Label19.TabIndex = 37
+        Me.Label19.Text = "Date de debut d'intervention :"
+        Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(348, 398)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(209, 16)
+        Me.Label20.TabIndex = 36
+        Me.Label20.Text = "Nbr charge globale estimée :"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(593, 510)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(0, 16)
+        Me.Label21.TabIndex = 47
+        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(593, 482)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(0, 16)
+        Me.Label22.TabIndex = 46
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(593, 454)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(0, 16)
+        Me.Label23.TabIndex = 45
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(369, 454)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(188, 16)
+        Me.Label24.TabIndex = 44
+        Me.Label24.Text = "Date de fin d'intervention :"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(368, 510)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(189, 16)
+        Me.Label25.TabIndex = 43
+        Me.Label25.Text = "Nbr heures en validation : "
+        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(367, 482)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(190, 16)
+        Me.Label26.TabIndex = 42
+        Me.Label26.Text = "Nbr heures en production :"
+        '
         'Projet
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1322, 607)
+        Me.ClientSize = New System.Drawing.Size(1371, 570)
+        Me.Controls.Add(Me.Label21)
+        Me.Controls.Add(Me.Label22)
+        Me.Controls.Add(Me.Label23)
+        Me.Controls.Add(Me.Label24)
+        Me.Controls.Add(Me.Label25)
+        Me.Controls.Add(Me.Label26)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Nom_Etape)
+        Me.Controls.Add(Me.Label18)
+        Me.Controls.Add(Me.Label19)
+        Me.Controls.Add(Me.Label20)
+        Me.Controls.Add(Me.LB_Date)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.LB_Resume)
+        Me.Controls.Add(Me.LB_Auteur)
         Me.Controls.Add(Me.Quitter)
         Me.Controls.Add(Me.BTN_Back)
-        Me.Controls.Add(Me.LB_Resume)
+        Me.Controls.Add(Me.LB15)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.LB_Doc)
@@ -432,7 +612,23 @@ Partial Class Projet
     Friend WithEvents LB_Doc As ListBox
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents LB_Resume As Label
+    Friend WithEvents LB15 As Label
     Friend WithEvents BTN_Back As Button
     Friend WithEvents Quitter As Button
+    Friend WithEvents LB_Auteur As Label
+    Friend WithEvents LB_Resume As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents LB_Date As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Nom_Etape As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label26 As Label
 End Class
