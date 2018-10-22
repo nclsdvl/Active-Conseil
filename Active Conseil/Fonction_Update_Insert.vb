@@ -156,6 +156,7 @@ Module Fonction_Update_Insert
         valeurAjouter3.Direction = ParameterDirection.ReturnValue
 
 
+
         Mycommand.ExecuteNonQuery()
         maConnexion.Close()
         Return valeurAjouter3.Value
