@@ -58,15 +58,15 @@ Partial Class Projet
         Me.LB_Resume = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.LB_Date = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Nom_Etape = New System.Windows.Forms.Label()
+        Me.LB_Date_deb = New System.Windows.Forms.Label()
+        Me.LB_Charge_Global = New System.Windows.Forms.Label()
+        Me.LB_Nom_Etape = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
+        Me.LB_NBR_valid = New System.Windows.Forms.Label()
+        Me.LB_Hr_Prod = New System.Windows.Forms.Label()
+        Me.LB_Date_Fin = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
@@ -411,30 +411,30 @@ Partial Class Projet
         Me.LB_Date.Size = New System.Drawing.Size(0, 16)
         Me.LB_Date.TabIndex = 35
         '
-        'Label15
+        'LB_Date_deb
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(593, 426)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(0, 16)
-        Me.Label15.TabIndex = 41
-        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LB_Date_deb.AutoSize = True
+        Me.LB_Date_deb.Location = New System.Drawing.Point(593, 426)
+        Me.LB_Date_deb.Name = "LB_Date_deb"
+        Me.LB_Date_deb.Size = New System.Drawing.Size(0, 16)
+        Me.LB_Date_deb.TabIndex = 41
+        Me.LB_Date_deb.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label16
+        'LB_Charge_Global
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(593, 398)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(0, 16)
-        Me.Label16.TabIndex = 40
+        Me.LB_Charge_Global.AutoSize = True
+        Me.LB_Charge_Global.Location = New System.Drawing.Point(593, 398)
+        Me.LB_Charge_Global.Name = "LB_Charge_Global"
+        Me.LB_Charge_Global.Size = New System.Drawing.Size(0, 16)
+        Me.LB_Charge_Global.TabIndex = 40
         '
-        'Nom_Etape
+        'LB_Nom_Etape
         '
-        Me.Nom_Etape.AutoSize = True
-        Me.Nom_Etape.Location = New System.Drawing.Point(593, 370)
-        Me.Nom_Etape.Name = "Nom_Etape"
-        Me.Nom_Etape.Size = New System.Drawing.Size(0, 16)
-        Me.Nom_Etape.TabIndex = 39
+        Me.LB_Nom_Etape.AutoSize = True
+        Me.LB_Nom_Etape.Location = New System.Drawing.Point(593, 370)
+        Me.LB_Nom_Etape.Name = "LB_Nom_Etape"
+        Me.LB_Nom_Etape.Size = New System.Drawing.Size(0, 16)
+        Me.LB_Nom_Etape.TabIndex = 39
         '
         'Label18
         '
@@ -467,30 +467,30 @@ Partial Class Projet
         Me.Label20.TabIndex = 36
         Me.Label20.Text = "Nbr charge globale estimée :"
         '
-        'Label21
+        'LB_NBR_valid
         '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(593, 510)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(0, 16)
-        Me.Label21.TabIndex = 47
-        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LB_NBR_valid.AutoSize = True
+        Me.LB_NBR_valid.Location = New System.Drawing.Point(593, 510)
+        Me.LB_NBR_valid.Name = "LB_NBR_valid"
+        Me.LB_NBR_valid.Size = New System.Drawing.Size(0, 16)
+        Me.LB_NBR_valid.TabIndex = 47
+        Me.LB_NBR_valid.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label22
+        'LB_Hr_Prod
         '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(593, 482)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(0, 16)
-        Me.Label22.TabIndex = 46
+        Me.LB_Hr_Prod.AutoSize = True
+        Me.LB_Hr_Prod.Location = New System.Drawing.Point(593, 482)
+        Me.LB_Hr_Prod.Name = "LB_Hr_Prod"
+        Me.LB_Hr_Prod.Size = New System.Drawing.Size(0, 16)
+        Me.LB_Hr_Prod.TabIndex = 46
         '
-        'Label23
+        'LB_Date_Fin
         '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(593, 454)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(0, 16)
-        Me.Label23.TabIndex = 45
+        Me.LB_Date_Fin.AutoSize = True
+        Me.LB_Date_Fin.Location = New System.Drawing.Point(593, 454)
+        Me.LB_Date_Fin.Name = "LB_Date_Fin"
+        Me.LB_Date_Fin.Size = New System.Drawing.Size(0, 16)
+        Me.LB_Date_Fin.TabIndex = 45
         '
         'Label24
         '
@@ -528,15 +528,15 @@ Partial Class Projet
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1371, 570)
-        Me.Controls.Add(Me.Label21)
-        Me.Controls.Add(Me.Label22)
-        Me.Controls.Add(Me.Label23)
+        Me.Controls.Add(Me.LB_NBR_valid)
+        Me.Controls.Add(Me.LB_Hr_Prod)
+        Me.Controls.Add(Me.LB_Date_Fin)
         Me.Controls.Add(Me.Label24)
         Me.Controls.Add(Me.Label25)
         Me.Controls.Add(Me.Label26)
-        Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.Label16)
-        Me.Controls.Add(Me.Nom_Etape)
+        Me.Controls.Add(Me.LB_Date_deb)
+        Me.Controls.Add(Me.LB_Charge_Global)
+        Me.Controls.Add(Me.LB_Nom_Etape)
         Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.Label20)
@@ -619,15 +619,15 @@ Partial Class Projet
     Friend WithEvents LB_Resume As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents LB_Date As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Nom_Etape As Label
+    Friend WithEvents LB_Date_deb As Label
+    Friend WithEvents LB_Charge_Global As Label
+    Friend WithEvents LB_Nom_Etape As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents Label20 As Label
-    Friend WithEvents Label21 As Label
-    Friend WithEvents Label22 As Label
-    Friend WithEvents Label23 As Label
+    Friend WithEvents LB_NBR_valid As Label
+    Friend WithEvents LB_Hr_Prod As Label
+    Friend WithEvents LB_Date_Fin As Label
     Friend WithEvents Label24 As Label
     Friend WithEvents Label25 As Label
     Friend WithEvents Label26 As Label
